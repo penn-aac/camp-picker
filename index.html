@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>AAVC Camp Picker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5zfQlea6Hq-qMa8tb6eoXgndGld-6e54&callback=__aavcMapsReady&libraries=places" async defer></script>
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --navy:   #0c1a3d;
+  --navy2:  #162554;
+  --red:    #e5303e;
+  --red2:   #bf1f2c;
+  --gold:   #f5b942;
+  --white:  #ffffff;
+  --off:    #f4f6fa;
+  --border: #e0e6f0;
+  --text:   #1e2a45;
+  --muted:  #5a6a8a;
+  --faint:  #9aaac4;
+  --green:  #15803d;
+  --ms-bg:  #fef3c7;
+  --ms-tx:  #92400e;
+  --op-bg:  #fee2e2;
+  --op-tx:  #991b1b;
+  --co-bg:  #f0fdf4;
+  --co-tx:  #166534;
+  --card-r: 12px;
+  --trans:  all .15s ease;
+}
+/* ── RESET ──────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{height:100%;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(--text);height:100%;overflow:hidden;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:#cdd5e0;border-radius:4px}
+/* ── LOADING ────────────────────────────────────────────── */
+#loader{position:fixed;inset:0;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:999;transition:opacity .4s ease}
+#loader.fade{opacity:0;pointer-events:none}
+.loader-logo{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,6vw,42px);font-weight:900;color:var(--white);letter-spacing:.06em;text-transform:uppercase}
+.loader-logo span{color:var(--red)}
+.loader-bar{width:180px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.loader-fill{height:100%;width:0;background:var(--red);border-radius:2px;transition:width .6s ease}
+.loader-text{font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.04em}
+/* ── DESKTOP LAYOUT ─────────────────────────────────────── */
+.app{display:flex;flex-direction:column;height:100vh}
+.hdr{background:var(--navy);flex-shrink:0;display:flex;align-items:center;gap:16px;padding:0 20px;height:54px;border-bottom:2px solid var(--red)}
+.hdr-logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--white);letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.hdr-logo em{color:var(--red);font-style:normal}
+.hdr-meta{font-size:11px;color:var(--faint);margin-left:2px;margin-top:1px}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.hdr-pill{background:var(--red);color:var(--white);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;display:none}
+.hdr-pill.show{display:block}
+.refresh-btn{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:var(--trans);display:flex;align-items:center;gap:5px}
+.refresh-btn:hover{background:rgba(255,255,255,.15)}
+.refresh-btn:disabled{opacity:.35;cursor:not-allowed}
+.ctrl{background:var(--white);border-bottom:1px solid var(--border);flex-shrink:0;padding:10px 18px}
+.ctrl-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.inp{padding:8px 12px;border:1.5px solid var(--border);border-radius:9px;font-size:13px;font-weight:500;color:var(--text);outline:none;background:var(--white);transition:border-color .12s}
+.inp:focus{border-color:var(--navy)}
+.inp::placeholder{color:var(--faint)}
+.mode-wrap{display:flex;border:1.5px solid var(--border);border-radius:9px;overflow:hidden;flex-shrink:0}
+.mbtn{padding:8px 15px;border:none;background:var(--white);color:var(--muted);font-size:12px;font-weight:700;cursor:pointer;transition:var(--trans);white-space:nowrap;letter-spacing:.02em}
+.mbtn.on{background:var(--navy);color:var(--white)}
+.find-btn{padding:8px 18px;background:var(--red);color:var(--white);border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;transition:var(--trans);white-space:nowrap;letter-spacing:.02em}
+.find-btn:hover{background:var(--red2)}
+.find-btn:disabled{opacity:.4;cursor:not-allowed}
+/* ── BODY ───────────────────────────────────────────────── */
+.body{flex:1;display:flex;overflow:hidden}
+/* ── LEFT PANEL ─────────────────────────────────────────── */
+.panel{width:390px;flex-shrink:0;display:flex;flex-direction:column;background:var(--white);border-right:1px solid var(--border);overflow:hidden}
+.panel-hdr{padding:10px 16px;border-bottom:1px solid #f0f4fa;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;font-size:13px;min-height:40px}
+.panel-hdr strong{color:var(--navy);font-weight:700}
+.sel-all-btn{background:none;border:none;font-size:12px;color:var(--red);cursor:pointer;font-weight:700;letter-spacing:.02em}
+.list{flex:1;overflow-y:auto;padding:8px}
+.state-lbl{font-size:10px;font-weight:800;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;padding:8px 4px 4px}
+/* ── CAMP CARD ──────────────────────────────────────────── */
+.card{padding:11px 13px;border:1.5px solid var(--border);border-radius:var(--card-r);margin-bottom:5px;display:flex;gap:10px;align-items:flex-start;cursor:pointer;background:var(--white);transition:background .1s,border-color .12s;-webkit-tap-highlight-color:transparent;user-select:none}
+.card:hover{background:#f7f9ff}
+.card.sel{background:#eef3ff;border-color:var(--navy)}
+.chk{width:18px;height:18px;border-radius:5px;border:2px solid #c8d5e8;background:var(--white);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--white);transition:var(--trans)}
+.chk.on{background:var(--navy);border-color:var(--navy)}
+.card-body{flex:1;min-width:0}
+.card-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px;line-height:1.3}
+.card-loc{font-size:12px;color:var(--muted);margin-bottom:6px}
+.tags{display:flex;gap:4px;flex-wrap:wrap}
+.tag{font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;letter-spacing:.02em;white-space:nowrap}
+.tag-ms{background:var(--ms-bg);color:var(--ms-tx)}
+.tag-open{background:var(--op-bg);color:var(--op-tx)}
+.tag-coach{background:var(--co-bg);color:var(--co-tx);font-weight:600}
+.drive-col{flex-shrink:0;text-align:right}
+.drive-t{font-size:13px;font-weight:800}
+.drive-d{font-size:10px;color:var(--faint);margin-top:1px}
+/* ── EMPTY STATE ────────────────────────────────────────── */
+.empty{padding:48px 24px;text-align:center;color:var(--faint)}
+.empty-icon{font-size:38px;margin-bottom:12px}
+.empty-title{font-size:14px;font-weight:700;color:var(--muted);margin-bottom:5px}
+.empty-sub{font-size:12px;line-height:1.5}
+/* ── DRAFT PANEL ────────────────────────────────────────── */
+.draft-panel{border-top:1px solid var(--border);padding:12px 14px;flex-shrink:0;background:#fafbfe;display:none;flex-direction:column;gap:8px}
+.draft-panel.show{display:flex}
+.type-row{display:flex;gap:6px}
+.tbtn{flex:1;padding:8px;border-radius:8px;border:1.5px solid var(--border);background:var(--white);color:var(--muted);font-size:12px;font-weight:700;cursor:pointer;transition:var(--trans);letter-spacing:.02em}
+.tbtn.on{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.gen-btn{width:100%;padding:11px;background:var(--red);color:var(--white);border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;transition:var(--trans);letter-spacing:.02em}
+.gen-btn:hover{background:var(--red2)}
+/* ── MAP ────────────────────────────────────────────────── */
+.map-wrap{flex:1;position:relative;overflow:hidden}
+#map{width:100%;height:100%}
+.map-hint{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.map-hint-card{background:var(--white);border-radius:16px;padding:16px 28px;box-shadow:0 8px 40px rgba(12,26,61,.14);text-align:center}
+.map-hint-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.05em}
+.map-hint-sub{font-size:12px;color:var(--faint);margin-top:4px}
+/* ── MODAL ──────────────────────────────────────────────── */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(12,26,61,.65);align-items:center;justify-content:center;z-index:300;padding:20px;backdrop-filter:blur(3px)}
+.modal-bg.show{display:flex}
+.modal{background:var(--white);border-radius:18px;width:100%;max-width:540px;max-height:85vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 32px 80px rgba(12,26,61,.3)}
+.modal-hdr{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.modal-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.05em}
+.modal-close{background:none;border:none;font-size:24px;color:var(--faint);cursor:pointer;line-height:1;padding:0 4px;transition:color .12s}
+.modal-close:hover{color:var(--text)}
+.modal-ta{flex:1;padding:18px 22px;border:none;resize:none;font-size:13px;line-height:1.8;color:var(--text);outline:none;min-height:180px}
+.modal-ftr{padding:13px 22px;border-top:1px solid var(--border);display:flex;gap:8px;justify-content:flex-end;background:#fafbfe;flex-shrink:0}
+.btn-ghost{padding:9px 18px;background:var(--white);color:var(--text);border:1.5px solid var(--border);border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;transition:var(--trans)}
+.btn-ghost:hover{background:var(--off)}
+.btn-copy{padding:9px 22px;background:var(--red);color:var(--white);border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;min-width:150px;transition:background .2s}
+.btn-copy:hover{background:var(--red2)}
+.btn-green{background:var(--green)!important}
+
+/* ════════════════════════════════════════════════════════
+   MOBILE  (≤ 768px)
+════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  body{overflow:auto}
+  .app{height:auto;min-height:100vh;overflow:visible}
+  /* header */
+  .hdr{padding:0 16px;height:50px}
+  .hdr-logo{font-size:18px}
+  .refresh-btn span{display:none} /* icon only on mobile */
+  /* controls */
+  .ctrl{padding:10px 14px}
+  .ctrl-row{gap:6px}
+  .inp{font-size:14px;padding:10px 12px}
+  .mode-wrap{width:100%}
+  .mbtn{flex:1;text-align:center;font-size:13px;padding:10px 8px}
+  .find-btn{width:100%;padding:12px;font-size:14px;margin-top:2px}
+  /* body goes vertical */
+  .body{flex-direction:column;overflow:visible}
+  /* panel fills width, no fixed height */
+  .panel{width:100%;border-right:none;border-bottom:1px solid var(--border);overflow:visible}
+  .list{overflow:visible;padding:10px 12px;max-height:none}
+  /* bigger cards for touch */
+  .card{padding:13px 14px;border-radius:14px;margin-bottom:8px}
+  .chk{width:22px;height:22px;border-radius:6px;font-size:12px}
+  .card-name{font-size:14px}
+  .card-loc{font-size:13px}
+  .tag{font-size:11px;padding:3px 8px}
+  /* draft panel */
+  .draft-panel{padding:14px 14px;position:sticky;bottom:0;background:var(--white);border-top:2px solid var(--border);box-shadow:0 -4px 24px rgba(12,26,61,.1)}
+  .tbtn{padding:11px;font-size:13px}
+  .gen-btn{padding:14px;font-size:15px}
+  /* hide map on mobile */
+  .map-wrap{display:none}
+  /* modal full screen on mobile */
+  .modal-bg{padding:0;align-items:flex-end}
+  .modal{max-width:100%;max-height:92vh;border-radius:18px 18px 0 0}
+  .modal-ta{font-size:14px;line-height:1.75}
+  .btn-copy{min-width:120px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-logo">ALL <em>AMERICAN</em> VB</div>
+  <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  <div class="loader-text" id="loaderText">Connecting to Drive…</div>
+</div>
+
+<!-- APP -->
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="hdr">
+    <div>
+      <div class="hdr-logo">AAVC <em>Camp</em> Picker</div>
+      <div class="hdr-meta" id="hdrMeta">Loading live data…</div>
+    </div>
+    <div class="hdr-right">
+      <button class="refresh-btn" id="refreshBtn" onclick="loadData()" disabled>
+        <span>↻</span><span> Refresh</span>
+      </button>
+      <div class="hdr-pill" id="selPill">0 selected</div>
+    </div>
+  </header>
+
+  <!-- CONTROLS -->
+  <div class="ctrl">
+    <div class="ctrl-row">
+      <div class="mode-wrap">
+        <button class="mbtn on" id="mbState" onclick="setMode('state')">By State</button>
+        <button class="mbtn" id="mbTime" onclick="setMode('time')">Drive Time</button>
+      </div>
+      <input class="inp" id="coachName" type="text" placeholder="Coach name (optional)" style="width:195px">
+      <div id="stateInputs" style="display:flex;gap:8px;flex:1">
+        <select class="inp" id="stateSel" onchange="filterByState(this.value)" style="flex:1">
+          <option value="">Loading camps…</option>
+        </select>
+      </div>
+      <div id="timeInputs" style="display:none;gap:8px;flex:1;align-items:center">
+        <input class="inp" id="locInp" type="text" placeholder="Coach city, state  (e.g. Muncie, IN)" style="flex:1" onkeydown="if(event.key==='Enter')doSearch()">
+        <select class="inp" id="radius" style="width:110px">
+          <option value="1">1 hr</option>
+          <option value="1.5">1.5 hrs</option>
+          <option value="2" selected>2 hrs</option>
+          <option value="2.5">2.5 hrs</option>
+          <option value="3">3 hrs</option>
+          <option value="4">4 hrs</option>
+        </select>
+        <button class="find-btn" id="findBtn" onclick="doSearch()" disabled>Find Camps</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- LEFT PANEL -->
+    <div class="panel">
+      <div class="panel-hdr" id="panelHdr">
+        <span style="color:var(--faint)">Loading…</span>
+      </div>
+      <div class="list" id="list">
+        <div class="empty">
+          <div class="empty-icon">⏳</div>
+          <div class="empty-title">Fetching live camp data</div>
+          <div class="empty-sub">Reading your FileMaker export from Google Drive…</div>
+        </div>
+      </div>
+      <div class="draft-panel" id="draftPanel">
+        <div class="type-row">
+          <button class="tbtn on" id="btnTxt" onclick="setDraftType('text')">Text Message</button>
+          <button class="tbtn" id="btnEml" onclick="setDraftType('email')">Email</button>
+        </div>
+        <button class="gen-btn" id="genBtn" onclick="generate()">Draft Message</button>
+      </div>
+    </div>
+
+    <!-- MAP (desktop only) -->
+    <div class="map-wrap">
+      <div class="map-hint" id="mapHint">
+        <div class="map-hint-card">
+          <div class="map-hint-title" id="mapHintTitle">Select a State</div>
+          <div class="map-hint-sub" id="mapHintSub">Pick from the dropdown above</div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+  </div><!-- /body -->
+</div><!-- /app -->
+
+<!-- DRAFT MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="modal-hdr">
+      <div class="modal-title" id="modalTitle">Draft</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <textarea class="modal-ta" id="modalTa"></textarea>
+    <div class="modal-ftr">
+      <button class="btn-ghost" onclick="closeModal()">Close</button>
+      <button class="btn-copy" id="copyBtn" onclick="copyDraft()">Copy to Clipboard</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ─── MAPS CALLBACK ──────────────────────────────────── */
+window.__aavcMapsReady = function() {
+  mapsReady = true;
+  document.getElementById('findBtn').disabled = false;
+  if (document.getElementById('map')) {
+    mapObj = new google.maps.Map(document.getElementById('map'), {
+      center:{lat:39.8,lng:-95}, zoom:4,
+      mapTypeControl:false, streetViewControl:false, fullscreenControl:false,
+      zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_TOP},
+      styles:MAP_STYLE
+    });
+  }
+};
+
+/* ─── CONFIG ──────────────────────────────────────────── */
+const DRIVE_FILE_ID = '10vp7u8pceefJo0eyEo5h9qNdSn7bQx6j';
+const DRIVE_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${DRIVE_FILE_ID}`;
+const PROXIES = [
+  `https://api.allorigins.win/raw?url=${encodeURIComponent(DRIVE_URL)}`,
+  `https://corsproxy.io/?${encodeURIComponent(DRIVE_URL)}`,
+  `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(DRIVE_URL)}`,
+];
+
+const SN = {AK:"Alaska",AL:"Alabama",AR:"Arkansas",AZ:"Arizona",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",HI:"Hawaii",IA:"Iowa",ID:"Idaho",IL:"Illinois",IN:"Indiana",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",MA:"Massachusetts",MD:"Maryland",ME:"Maine",MI:"Michigan",MN:"Minnesota",MO:"Missouri",MS:"Mississippi",MT:"Montana",NC:"North Carolina",ND:"North Dakota",NE:"Nebraska",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NV:"Nevada",NY:"New York",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VA:"Virginia",VT:"Vermont",WA:"Washington",WI:"Wisconsin",WV:"West Virginia",WY:"Wyoming"};
+
+const MAP_STYLE=[{featureType:"all",elementType:"geometry",stylers:[{color:"#eef2f7"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#fff"}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#fff"}]},{featureType:"water",elementType:"geometry",stylers:[{color:"#bfdbf7"}]},{featureType:"poi",stylers:[{visibility:"off"}]},{featureType:"transit",stylers:[{visibility:"off"}]},{featureType:"administrative.province",elementType:"geometry.stroke",stylers:[{color:"#c8d6e5"}]}];
+
+/* ─── STATE ───────────────────────────────────────────── */
+let allCamps=[], results=[], selected=new Set();
+let mode='state', draftType='text';
+let mapObj=null, mapsReady=false, mkrs=[], cpin=null;
+const GEO={};
+
+/* ─── LOADER ──────────────────────────────────────────── */
+function setLoader(pct, msg) {
+  document.getElementById('loaderFill').style.width = pct+'%';
+  document.getElementById('loaderText').textContent = msg;
+}
+function hideLoader() {
+  const l = document.getElementById('loader');
+  l.classList.add('fade');
+  setTimeout(()=>l.style.display='none', 450);
+}
+
+/* ─── MAP INIT ────────────────────────────────────────── */
+window.__mapsReady = function() {
+  mapsReady = true;
+  document.getElementById('findBtn').disabled = false;
+  mapObj = new google.maps.Map(document.getElementById('map'), {
+    center:{lat:39.8,lng:-95}, zoom:4,
+    mapTypeControl:false, streetViewControl:false, fullscreenControl:false,
+    zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_TOP},
+    styles:MAP_STYLE
+  });
+};
+
+/* ─── PARSE MARKDOWN ──────────────────────────────────── */
+function parseMD(md) {
+  const camps = [];
+  const blocks = md.split(/^### /m).slice(1);
+  blocks.forEach(blk => {
+    const sm = blk.match(/^(.+?)\s*\(([A-Z]{2})\)/);
+    if (!sm) return;
+    const stateName = sm[1].trim(), stateAbbr = sm[2];
+    blk.split(/^#### /m).slice(1).forEach((cb, idx) => {
+      const heading = cb.split('\n')[0].trim();
+      if (heading.includes('_Cancelled_') || heading.includes('Cancelled')) return;
+      const name = heading.replace(/\s*—\s*_?Cancelled_?/i,'').trim();
+      const get = lbl => { const m=cb.match(new RegExp(`\\*\\*${lbl}:\\*\\*\\s*(.+)`)); return m?m[1].trim():''; };
+      const loc=get('Location'), dates=get('Dates').replace(/\s*—\s*Sessions:.*/,'').trim();
+      const ms=get('MS Session').toLowerCase().startsWith('yes');
+      const slots=get('Coaching Slots');
+      let open=0, coaches=[];
+      if (slots && slots!=='_no slot records_') {
+        const a=slots.match(/all (\d+) open/), b=slots.match(/(\d+) open/);
+        if(a) open=parseInt(a[1]); else if(b) open=parseInt(b[1]);
+        const f1=slots.match(/filled\s*—\s*(.+)$/), f2=slots.match(/\*\*\d+ filled\*\*\s*\(([^)]+)\)/);
+        const raw=f1?f1[1]:f2?f2[1]:'';
+        coaches=raw.split(',').map(s=>s.replace(/\s*\([^)]*\)/g,'').trim()).filter(Boolean);
+      }
+      if (open===0) return;
+      const city = loc.split(',')[0].trim().replace(/\s*\(.*/,'');
+      camps.push({id:camps.length, state:stateAbbr, stateName, name, city, loc, dates, ms, open, coaches});
+    });
+  });
+  return camps;
+}
+
+/* ─── LOAD DATA ───────────────────────────────────────── */
+async function loadData() {
+  setLoader(10,'Connecting to Google Drive…');
+  document.getElementById('refreshBtn').disabled = true;
+  try {
+    let text=null, lastErr='';
+    for (let i=0;i<PROXIES.length;i++) {
+      setLoader(20+i*20, `Fetching data (attempt ${i+1})…`);
+      try {
+        const r = await fetch(PROXIES[i],{cache:'no-store'});
+        if (r.ok) {
+          const t = await r.text();
+          if (t.includes('# AAVC')||t.includes('## Camps by State')) { text=t; break; }
+          lastErr='Got HTML instead of markdown';
+        } else lastErr='HTTP '+r.status;
+      } catch(e){ lastErr=e.message; }
+    }
+    if (!text) throw new Error(lastErr||'All proxies failed');
+    setLoader(80,'Parsing camp data…');
+    allCamps = parseMD(text);
+    buildStateDD();
+    const slotsM = text.match(/\*\*Coaching slots[^*]*\*\*([^\n]+)/);
+    document.getElementById('hdrMeta').textContent =
+      `Live · ${allCamps.length} camps with open spots${slotsM?' · '+slotsM[1].trim().replace(/\*\*/g,''):''}`;
+    setPanelHdr('<span style="color:var(--faint)">Select a state or enter a location</span>');
+    setList([]);
+    setLoader(100,'Ready!');
+    setTimeout(hideLoader, 400);
+  } catch(e) {
+    document.getElementById('hdrMeta').textContent = 'Error loading — click Refresh';
+    setLoader(100,'Error: '+e.message);
+    setTimeout(hideLoader, 1200);
+  }
+  document.getElementById('refreshBtn').disabled = false;
+}
+
+function buildStateDD() {
+  const states=[...new Set(allCamps.map(c=>c.state))].sort();
+  const s=document.getElementById('stateSel');
+  s.innerHTML='<option value="">— Select a state —</option>';
+  states.forEach(st=>{
+    const o=document.createElement('option');
+    o.value=st;
+    o.textContent=`${SN[st]||st} (${allCamps.filter(c=>c.state===st).length} open)`;
+    s.appendChild(o);
+  });
+}
+
+/* ─── MODE ────────────────────────────────────────────── */
+function setMode(m) {
+  mode=m;
+  document.getElementById('mbState').className='mbtn'+(m==='state'?' on':'');
+  document.getElementById('mbTime').className='mbtn'+(m==='time'?' on':'');
+  document.getElementById('stateInputs').style.display=m==='state'?'flex':'none';
+  document.getElementById('timeInputs').style.display=m==='time'?'flex':'none';
+  document.getElementById('mapHintTitle').textContent=m==='state'?'Select a State':'Enter Coach Location';
+  document.getElementById('mapHintSub').textContent=m==='state'?'Pick from the dropdown':'Type a city and hit Find Camps';
+  results=[]; selected=new Set(); updateSel(); setList([]);
+  setPanelHdr(`<span style="color:var(--faint)">${m==='state'?'Select a state above':'Enter a location above'}</span>`);
+  showHint(true);
+}
+
+/* ─── FILTER BY STATE ─────────────────────────────────── */
+function filterByState(st) {
+  selected=new Set(); updateSel();
+  if (!st) { results=[]; setList([]); setPanelHdr('<span style="color:var(--faint)">Select a state above</span>'); showHint(true); return; }
+  results=allCamps.filter(c=>c.state===st).sort((a,b)=>a.dates.localeCompare(b.dates));
+  setPanelHdr(`<strong>${results.length} camp${results.length!==1?'s':''}</strong> in ${SN[st]||st} <button class="sel-all-btn" onclick="toggleAll()">Select all</button>`);
+  setList(results, false);
+  if (mapsReady && mapObj) updateMap(null, results);
+}
+
+/* ─── DRIVE TIME ──────────────────────────────────────── */
+async function doSearch() {
+  if (!mapsReady) return;
+  const loc=document.getElementById('locInp').value.trim();
+  if (!loc) return;
+  const hrs=parseFloat(document.getElementById('radius').value);
+  const btn=document.getElementById('findBtn');
+  btn.textContent='Searching…'; btn.disabled=true;
+  selected=new Set(); updateSel();
+  try {
+    const geo=new google.maps.Geocoder();
+    const origin=await new Promise((res,rej)=>geo.geocode({address:loc},(r,s)=>s==='OK'?res(r[0].geometry.location):rej(new Error(`Could not locate "${loc}"`))));
+    for (const c of allCamps) {
+      if (!c.lat) {
+        const k=`${c.city},${c.state}`;
+        if (GEO[k]) { c.lat=GEO[k].lat; c.lng=GEO[k].lng; }
+        else {
+          await new Promise(res=>geo.geocode({address:`${c.city}, ${c.state}`},(r,s)=>{
+            if(s==='OK'){const p={lat:r[0].geometry.location.lat(),lng:r[0].geometry.location.lng()};GEO[k]=p;c.lat=p.lat;c.lng=p.lng;}res();
+          }));
+        }
+      }
+    }
+    const valid=allCamps.filter(c=>c.lat&&c.lng);
+    const svc=new google.maps.DistanceMatrixService();
+    const all=[];
+    for (let i=0;i<valid.length;i+=25) {
+      const batch=valid.slice(i,i+25);
+      const resp=await new Promise(res=>svc.getDistanceMatrix({origins:[origin],destinations:batch.map(c=>new google.maps.LatLng(c.lat,c.lng)),travelMode:'DRIVING',unitSystem:google.maps.UnitSystem.IMPERIAL},(r,s)=>res(s==='OK'?r:null)));
+      if(resp) batch.forEach((c,i)=>{const el=resp.rows[0].elements[i];if(el.status==='OK')all.push({...c,driveSecs:el.duration.value,driveHours:el.duration.value/3600,driveText:el.duration.text,distText:el.distance.text});});
+    }
+    results=all.filter(c=>c.driveHours<=hrs).sort((a,b)=>a.driveSecs-b.driveSecs);
+    setPanelHdr(`<strong>${results.length} camp${results.length!==1?'s':''}</strong> within ${hrs} hr${hrs!==1?'s':''} of ${loc} <button class="sel-all-btn" onclick="toggleAll()">Select all</button>`);
+    setList(results, true);
+    updateMap(origin, results);
+  } catch(e) { alert(e.message); }
+  btn.textContent='Find Camps'; btn.disabled=false;
+}
+
+/* ─── RENDER LIST ─────────────────────────────────────── */
+function setPanelHdr(html) { document.getElementById('panelHdr').innerHTML=html; }
+
+function setList(arr, showDrive) {
+  const el=document.getElementById('list');
+  if (!arr.length) {
+    el.innerHTML=`<div class="empty"><div class="empty-icon">🏐</div><div class="empty-title">${allCamps.length?'No results yet':'No data loaded'}</div><div class="empty-sub">${allCamps.length?'Select a state or search by location':'Click Refresh to try again'}</div></div>`;
+    return;
+  }
+  if (showDrive) {
+    el.innerHTML=arr.map(c=>cardHTML(c,true)).join('');
+  } else {
+    const states=[...new Set(arr.map(c=>c.state))];
+    el.innerHTML=states.map(st=>`<div class="state-lbl">${SN[st]||st}</div>${arr.filter(c=>c.state===st).map(c=>cardHTML(c,false)).join('')}`).join('');
+  }
+}
+
+function driveColor(h){if(h<=1)return'#15803d';if(h<=1.5)return'#65a30d';if(h<=2)return'#d97706';if(h<=3)return'#ea580c';return'#dc2626';}
+
+function cardHTML(c, showDrive) {
+  const sel=selected.has(c.id);
+  const tags=[
+    c.ms?'<span class="tag tag-ms">MS SESSION</span>':'',
+    c.open>=2?'<span class="tag tag-open">2 SPOTS OPEN</span>':c.open===1?'<span class="tag tag-open">1 SPOT OPEN</span>':'',
+    c.coaches.length?`<span class="tag tag-coach">w/ ${c.coaches.join(', ')}</span>`:''
+  ].join('');
+  const driveCol=showDrive&&c.driveText?`<div class="drive-col"><div class="drive-t" style="color:${driveColor(c.driveHours)}">${c.driveText}</div><div class="drive-d">${c.distText||''}</div></div>`:'';
+  return `<div class="card${sel?' sel':''}" id="card-${c.id}" onclick="tog(${c.id})">
+    <div class="chk${sel?' on':''}" id="chk-${c.id}">${sel?'✓':''}</div>
+    <div class="card-body">
+      <div class="card-name">${c.name}</div>
+      <div class="card-loc">${c.city}, ${c.state} · ${c.dates}</div>
+      <div class="tags">${tags}</div>
+    </div>
+    ${driveCol}
+  </div>`;
+}
+
+/* ─── SELECTION ───────────────────────────────────────── */
+function tog(id) {
+  selected.has(id)?selected.delete(id):selected.add(id);
+  const sel=selected.has(id);
+  const card=document.getElementById('card-'+id);
+  const chk=document.getElementById('chk-'+id);
+  if(card){card.className='card'+(sel?' sel':'');}
+  if(chk){chk.className='chk'+(sel?' on':'');chk.textContent=sel?'✓':'';}
+  updateSel();
+}
+
+function toggleAll() {
+  selected.size===results.length?selected=new Set():selected=new Set(results.map(c=>c.id));
+  setList(results, mode==='time');
+  updateSel();
+}
+
+function updateSel() {
+  const n=selected.size;
+  const pill=document.getElementById('selPill');
+  pill.className='hdr-pill'+(n>0?' show':'');
+  pill.textContent=n+' selected';
+  const dp=document.getElementById('draftPanel');
+  dp.className='draft-panel'+(n>0?' show':'');
+  document.getElementById('genBtn').textContent=`Draft ${draftType==='text'?'Text':'Email'} with ${n} Camp${n!==1?'s':''}`;
+  const sa=document.querySelector('.sel-all-btn');
+  if(sa) sa.textContent=selected.size===results.length?'Clear all':'Select all';
+}
+
+/* ─── DRAFT TYPE ──────────────────────────────────────── */
+function setDraftType(t) {
+  draftType=t;
+  document.getElementById('btnTxt').className='tbtn'+(t==='text'?' on':'');
+  document.getElementById('btnEml').className='tbtn'+(t==='email'?' on':'');
+  updateSel();
+}
+
+/* ─── GENERATE DRAFT ──────────────────────────────────── */
+function generate() {
+  const picks=results.filter(c=>selected.has(c.id));
+  if(!picks.length) return;
+  const name=document.getElementById('coachName').value.trim();
+  const first=name?name.split(' ')[0]:null;
+  const hi=first?`Hey ${first}!`:'Hey!';
+  let txt='';
+  if (draftType==='text') {
+    const lines=[hi,'','Here are some camps I have open that might work for you:',''];
+    picks.forEach(c=>{
+      lines.push(`${c.name} - ${c.city}, ${c.state}`);
+      lines.push(`${c.dates}${c.ms?' (includes MS session)':''}`);
+      lines.push('');
+    });
+    lines.push('Let me know what looks good!');
+    txt=lines.join('\n');
+  } else {
+    const list=picks.map(c=>`${c.name} - ${c.city}, ${c.state} | ${c.dates}${c.ms?' (includes MS session, +$150 bonus if it runs)':''}`).join('\n\n');
+    txt=`${hi}\n\nHere are some camps I have open that could work for your schedule:\n\n${list}\n\nTravel and hotel are covered on all camps. Let me know which ones interest you and we can go from there!\n\nErin\nAll American Volleyball Camps\n734-576-6367\nallamericanvolleyball.com`;
+  }
+  document.getElementById('modalTitle').textContent=draftType==='text'?'TEXT MESSAGE DRAFT':'EMAIL DRAFT';
+  document.getElementById('modalTa').value=txt;
+  document.getElementById('modalBg').className='modal-bg show';
+}
+
+function closeModal(){document.getElementById('modalBg').className='modal-bg';}
+
+function copyDraft(){
+  navigator.clipboard.writeText(document.getElementById('modalTa').value);
+  const b=document.getElementById('copyBtn');
+  b.textContent='Copied!'; b.className='btn-copy btn-green';
+  setTimeout(()=>{b.textContent='Copy to Clipboard';b.className='btn-copy';},2200);
+}
+
+/* ─── MAP ─────────────────────────────────────────────── */
+function showHint(show){
+  document.getElementById('mapHint').style.display=show?'flex':'none';
+}
+
+function updateMap(origin, camps) {
+  mkrs.forEach(m=>m.setMap(null)); mkrs=[];
+  if(cpin){cpin.setMap(null);cpin=null;}
+  showHint(false);
+  const bounds=new google.maps.LatLngBounds();
+  if(origin){
+    cpin=new google.maps.Marker({position:origin,map:mapObj,zIndex:999,icon:{path:'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',fillColor:'#0c1a3d',fillOpacity:1,strokeColor:'#fff',strokeWeight:1.5,scale:1.8,anchor:new google.maps.Point(12,22)}});
+    bounds.extend(origin);
+  }
+  camps.forEach(c=>{
+    if(!c.lat||!c.lng) return;
+    const m=new google.maps.Marker({position:{lat:c.lat,lng:c.lng},map:mapObj,icon:{path:google.maps.SymbolPath.CIRCLE,scale:9,fillColor:'#e5303e',fillOpacity:.92,strokeColor:'#fff',strokeWeight:2}});
+    const info=new google.maps.InfoWindow({content:`<div style="font-family:system-ui,sans-serif;padding:4px;min-width:155px"><b style="color:#0c1a3d;font-size:13px">${c.name}</b><br><span style="color:#5a6a8a;font-size:12px">${c.city}, ${c.state}</span><br><span style="font-size:12px;font-weight:600">${c.dates}</span>${c.driveText?` <span style="color:#9aaac4;font-size:11px">${c.driveText}</span>`:''}${c.ms?'<br><span style="color:#92400e;font-size:11px;font-weight:700">+ MS Session</span>':''}${c.open>0?`<br><span style="color:#991b1b;font-size:11px;font-weight:700">${c.open} spot${c.open>1?'s':''} open</span>`:''}</div>`});
+    m.addListener('click',()=>info.open(mapObj,m));
+    mkrs.push(m); bounds.extend({lat:c.lat,lng:c.lng});
+  });
+  const mapped=camps.filter(c=>c.lat&&c.lng);
+  if(mapped.length>0) mapObj.fitBounds(bounds,{padding:60});
+  else if(origin){mapObj.panTo(origin);mapObj.setZoom(8);}
+}
+
+/* ─── BOOT ────────────────────────────────────────────── */
+loadData();
+</script>
+
+
+</body>
+</html>
