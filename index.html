@@ -296,13 +296,31 @@ window.__aavcMapsReady = function() {
 };
 
 /* ─── CONFIG ──────────────────────────────────────────── */
-const DRIVE_FILE_ID = '10vp7u8pceefJo0eyEo5h9qNdSn7bQx6j';
-const DRIVE_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${DRIVE_FILE_ID}`;
-const PROXIES = [
-  `https://api.allorigins.win/raw?url=${encodeURIComponent(DRIVE_URL)}`,
-  `https://corsproxy.io/?${encodeURIComponent(DRIVE_URL)}`,
-  `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(DRIVE_URL)}`,
-];
+const DRIVE_FILENAME = 'AAVC_Camp_Assignments.md';
+// Search Drive by title, get most recent file ID, then fetch content
+async function getDriveFileUrl() {
+  // Use the Drive search API via proxy to find the latest file by title
+  const searchUrl = `https://www.googleapis.com/drive/v3/files?q=name%3D'${encodeURIComponent(DRIVE_FILENAME)}'%20and%20trashed%3Dfalse&orderBy=modifiedTime%20desc&pageSize=1&fields=files(id%2CmodifiedTime)&key=AIzaSyD5zfQlea6Hq-qMa8tb6eoXgndGld-6e54`;
+  try {
+    const r = await fetch(searchUrl);
+    if (r.ok) {
+      const d = await r.json();
+      if (d.files && d.files.length > 0) {
+        const id = d.files[0].id;
+        return `https://drive.google.com/uc?export=download&confirm=t&id=${id}`;
+      }
+    }
+  } catch(e) {}
+  // Fallback to known last ID
+  return `https://drive.google.com/uc?export=download&confirm=t&id=10vp7u8pceefJo0eyEo5h9qNdSn7bQx6j`;
+}
+function makeProxies(url) {
+  return [
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+  ];
+}
 
 const SN = {AK:"Alaska",AL:"Alabama",AR:"Arkansas",AZ:"Arizona",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",HI:"Hawaii",IA:"Iowa",ID:"Idaho",IL:"Illinois",IN:"Indiana",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",MA:"Massachusetts",MD:"Maryland",ME:"Maine",MI:"Michigan",MN:"Minnesota",MO:"Missouri",MS:"Mississippi",MT:"Montana",NC:"North Carolina",ND:"North Dakota",NE:"Nebraska",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NV:"Nevada",NY:"New York",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VA:"Virginia",VT:"Vermont",WA:"Washington",WI:"Wisconsin",WV:"West Virginia",WY:"Wyoming"};
 
@@ -374,9 +392,12 @@ async function loadData() {
   setLoader(10,'Connecting to Google Drive…');
   document.getElementById('refreshBtn').disabled = true;
   try {
+    setLoader(15, 'Finding latest camp file…');
+    const driveUrl = await getDriveFileUrl();
+    const PROXIES = makeProxies(driveUrl);
     let text=null, lastErr='';
     for (let i=0;i<PROXIES.length;i++) {
-      setLoader(20+i*20, `Fetching data (attempt ${i+1})…`);
+      setLoader(25+i*20, `Fetching data (attempt ${i+1})…`);
       try {
         const r = await fetch(PROXIES[i],{cache:'no-store'});
         if (r.ok) {
