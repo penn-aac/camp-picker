@@ -500,7 +500,7 @@ async function doSearch() {
       const resp=await new Promise(res=>svc.getDistanceMatrix({origins:[origin],destinations:batch.map(c=>new google.maps.LatLng(c.lat,c.lng)),travelMode:'DRIVING',unitSystem:google.maps.UnitSystem.IMPERIAL},(r,s)=>res(s==='OK'?r:null)));
       if(resp) batch.forEach((c,i)=>{const el=resp.rows[0].elements[i];if(el.status==='OK')all.push({...c,driveSecs:el.duration.value,driveHours:el.duration.value/3600,driveText:el.duration.text,distText:el.distance.text});});
     }
-    results=all.filter(c=>c.driveHours<=hrs).sort((a,b)=>a.driveSecs-b.driveSecs||parseDateStart(a.dates)-parseDateStart(b.dates));
+    results=all.filter(c=>c.driveHours<=hrs).sort((a,b)=>parseDateStart(a.dates)-parseDateStart(b.dates)||a.driveSecs-b.driveSecs);
     setPanelHdr(`<strong>${results.length} camp${results.length!==1?'s':''}</strong> within ${hrs} hr${hrs!==1?'s':''} of ${loc} <button class="sel-all-btn" onclick="toggleAll()">Select all</button>`);
     setList(results, true);
     updateMap(origin, results);
