@@ -295,31 +295,9 @@ window.__aavcMapsReady = function() {
 };
 
 /* ─── CONFIG ──────────────────────────────────────────── */
-const DRIVE_FILENAME = 'AAVC_Camp_Assignments.md';
-// Search Drive by title, get most recent file ID, then fetch content
-async function getDriveFileUrl() {
-  // Use the Drive search API via proxy to find the latest file by title
-  const searchUrl = `https://www.googleapis.com/drive/v3/files?q=name%3D'${encodeURIComponent(DRIVE_FILENAME)}'%20and%20trashed%3Dfalse&orderBy=modifiedTime%20desc&pageSize=1&fields=files(id%2CmodifiedTime)&key=AIzaSyD5zfQlea6Hq-qMa8tb6eoXgndGld-6e54`;
-  try {
-    const r = await fetch(searchUrl);
-    if (r.ok) {
-      const d = await r.json();
-      if (d.files && d.files.length > 0) {
-        const id = d.files[0].id;
-        return `https://drive.google.com/uc?export=download&confirm=t&id=${id}`;
-      }
-    }
-  } catch(e) {}
-  // Fallback to known last ID
-  return `https://drive.google.com/uc?export=download&confirm=t&id=10vp7u8pceefJo0eyEo5h9qNdSn7bQx6j`;
-}
-function makeProxies(url) {
-  return [
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-    `https://corsproxy.io/?${encodeURIComponent(url)}`,
-    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
-  ];
-}
+// Camp data lives in this repo at data/AAVC_Camp_Assignments.md.
+// The Cowork "Aavc camp assignments report" task pushes a fresh copy each weekday morning.
+const DATA_URL = './data/AAVC_Camp_Assignments.md';
 
 const SN = {AK:"Alaska",AL:"Alabama",AR:"Arkansas",AZ:"Arizona",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",HI:"Hawaii",IA:"Iowa",ID:"Idaho",IL:"Illinois",IN:"Indiana",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",MA:"Massachusetts",MD:"Maryland",ME:"Maine",MI:"Michigan",MN:"Minnesota",MO:"Missouri",MS:"Mississippi",MT:"Montana",NC:"North Carolina",ND:"North Dakota",NE:"Nebraska",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NV:"Nevada",NY:"New York",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VA:"Virginia",VT:"Vermont",WA:"Washington",WI:"Wisconsin",WV:"West Virginia",WY:"Wyoming"};
 
@@ -388,26 +366,17 @@ function parseMD(md) {
 
 /* ─── LOAD DATA ───────────────────────────────────────── */
 async function loadData() {
-  setLoader(10,'Connecting to Google Drive…');
+  setLoader(15, 'Loading camp data…');
   document.getElementById('refreshBtn').disabled = true;
   try {
-    setLoader(15, 'Finding latest camp file…');
-    const driveUrl = await getDriveFileUrl();
-    const PROXIES = makeProxies(driveUrl);
-    let text=null, lastErr='';
-    for (let i=0;i<PROXIES.length;i++) {
-      setLoader(25+i*20, `Fetching data (attempt ${i+1})…`);
-      try {
-        const r = await fetch(PROXIES[i],{cache:'no-store'});
-        if (r.ok) {
-          const t = await r.text();
-          if (t.includes('# AAVC')||t.includes('## Camps by State')) { text=t; break; }
-          lastErr='Got HTML instead of markdown';
-        } else lastErr='HTTP '+r.status;
-      } catch(e){ lastErr=e.message; }
+    setLoader(40, 'Fetching latest camps…');
+    const r = await fetch(DATA_URL, {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const text = await r.text();
+    if (!text.includes('# AAVC') && !text.includes('## Camps by State')) {
+      throw new Error('Camp data not yet synced. Try again in a few minutes.');
     }
-    if (!text) throw new Error(lastErr||'All proxies failed');
-    setLoader(80,'Parsing camp data…');
+    setLoader(80, 'Parsing camp data…');
     allCamps = parseMD(text).sort((a,b)=>parseDateStart(a.dates)-parseDateStart(b.dates));
     buildStateDD();
     const slotsM = text.match(/\*\*Coaching slots[^*]*\*\*([^\n]+)/);
@@ -415,11 +384,11 @@ async function loadData() {
       `Live · ${allCamps.length} camps with open spots${slotsM?' · '+slotsM[1].trim().replace(/\*\*/g,''):''}`;
     setPanelHdr('<span style="color:var(--faint)">Select a state or enter a location</span>');
     setList([]);
-    setLoader(100,'Ready!');
+    setLoader(100, 'Ready!');
     setTimeout(hideLoader, 400);
   } catch(e) {
     document.getElementById('hdrMeta').textContent = 'Error loading — click Refresh';
-    setLoader(100,'Error: '+e.message);
+    setLoader(100, 'Error: ' + e.message);
     setTimeout(hideLoader, 1200);
   }
   document.getElementById('refreshBtn').disabled = false;
