@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="English 9 Prep">
+<meta name="theme-color" content="#f4ede0">
+<title>Trey's English 9 Final Prep</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23f4ede0'/%3E%3Ctext x='90' y='120' font-family='Georgia,serif' font-size='110' font-weight='700' text-anchor='middle' fill='%231a1a1a'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4ede0'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='42' font-weight='700' text-anchor='middle' fill='%231a1a1a'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f4ede0;
+  --paper-2: #ebe1cf;
+  --paper-3: #ddd0b8;
+  --ink: #1a1a1a;
+  --ink-2: #3a3a3a;
+  --ink-3: #6a6a6a;
+  --accent: #a8321e;
+  --accent-2: #d4441f;
+  --gold: #b88a2c;
+  --green: #4a6b3e;
+  --green-soft: #d9e0c9;
+  --red-soft: #f0d4ca;
+  --line: #c9bda3;
+  --shadow: 0 1px 0 rgba(26,26,26,0.08), 0 4px 16px rgba(60,40,10,0.06);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --safe-bot: env(safe-area-inset-bottom, 0px);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: contain;
+}
+body {
+  background-image:
+    radial-gradient(rgba(120,90,40,0.04) 1px, transparent 1px);
+  background-size: 6px 6px;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.serif { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01" on; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 14px 14px calc(100px + var(--safe-bot)) 14px;
+}
+
+/* HEADER */
+.head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 6px 4px 18px 4px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 18px;
+}
+.head .title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.head .subtitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+/* NAV TABS */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.tab {
+  background: var(--paper-2);
+  border: 1.5px solid var(--line);
+  color: var(--ink-2);
+  padding: 10px 6px;
+  border-radius: var(--radius-sm);
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  min-height: 46px;
+  transition: all 0.12s ease;
+  font-feature-settings: "ss01" on;
+}
+.tab:active { transform: scale(0.97); }
+.tab.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* CARDS */
+.card {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.card.dark {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* HOME / DASHBOARD */
+.dash-hero {
+  background: linear-gradient(140deg, #1a1a1a 0%, #2a2520 100%);
+  color: var(--paper);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.dash-hero::before {
+  content: '';
+  position: absolute; top: -40px; right: -30px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(184,138,44,0.35), transparent 70%);
+  pointer-events: none;
+}
+.dash-eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.dash-pct {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 4px 0 2px 0;
+  font-variant-numeric: tabular-nums;
+}
+.dash-pct .small { font-size: 32px; opacity: 0.6; }
+.dash-status {
+  font-size: 14px;
+  color: rgba(244,237,224,0.8);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+.dash-status strong { color: var(--gold); font-weight: 600; }
+.dash-hero.ready { background: linear-gradient(140deg, #2c4a23 0%, #4a6b3e 100%); }
+.dash-hero.ready .dash-eyebrow { color: #d9e0c9; }
+.dash-hero.ready .dash-status { color: rgba(244,237,224,0.9); }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.stat {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  text-align: center;
+}
+.stat .n {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat .lbl {
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 18px 0 10px 0;
+  letter-spacing: -0.02em;
+  display: flex; align-items: baseline; justify-content: space-between;
+}
+.section-title .sub {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+}
+
+.menu-btn {
+  width: 100%;
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+  transition: all 0.12s ease;
+  color: var(--ink);
+}
+.menu-btn:active { transform: scale(0.985); background: var(--paper-2); }
+.menu-btn .mb-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.menu-btn .mb-meta {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-top: 2px;
+  font-weight: 500;
+}
+.menu-btn .mb-prog {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-weight: 500;
+  text-align: right;
+  min-width: 50px;
+}
+.menu-btn.done .mb-prog { color: var(--green); }
+.menu-btn .chevron { margin-left: 10px; color: var(--ink-3); }
+
+.prog-bar {
+  height: 4px;
+  background: var(--paper-3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.prog-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.prog-fill.green { background: var(--green); }
+
+/* BUTTONS */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 13px 18px;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  min-height: 46px;
+  width: 100%;
+  letter-spacing: -0.01em;
+  transition: all 0.12s ease;
+}
+.btn:active { transform: scale(0.98); }
+.btn.secondary { background: var(--paper-2); color: var(--ink); border: 1.5px solid var(--line); }
+.btn.ghost { background: transparent; color: var(--ink-2); }
+.btn.accent { background: var(--accent); color: white; }
+.btn.green { background: var(--green); color: white; }
+.btn.small { padding: 8px 12px; font-size: 13px; min-height: 36px; width: auto; }
+.btn-row { display: flex; gap: 8px; }
+.btn-row .btn { flex: 1; }
+
+/* FLASHCARD */
+.flash-wrap {
+  perspective: 1200px;
+  margin: 20px 0 18px 0;
+}
+.flash {
+  background: #fbf6ea;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  min-height: 280px;
+  padding: 30px 22px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: all 0.18s ease;
+}
+.flash:active { transform: scale(0.99); }
+.flash.flipped { background: #fff8ea; border-color: var(--gold); }
+.flash .word {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  font-feature-settings: "ss01" on;
+}
+.flash .pos {
+  font-style: italic;
+  color: var(--ink-3);
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-family: 'Fraunces', serif;
+}
+.flash .defn {
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+.flash .example {
+  font-style: italic;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 15px;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: auto;
+  max-width: 480px;
+}
+.flash .tap-hint {
+  position: absolute; bottom: 10px; left: 0; right: 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.flash .badge {
+  position: absolute;
+  top: 12px; right: 14px;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: var(--paper-3);
+  color: var(--ink-2);
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.flash .badge.mastered { background: var(--green-soft); color: var(--green); }
+
+.flash-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+.flash-nav .btn { width: 100%; padding: 10px; font-size: 13px; min-height: 42px; }
+
+.flash-counter {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 10px;
+}
+
+/* QUIZ */
+.q-wrap { margin: 4px 0 12px 0; }
+.q-progress {
+  display: flex; gap: 4px;
+  margin-bottom: 14px;
+}
+.q-progress .dot {
+  flex: 1; height: 4px;
+  background: var(--paper-3);
+  border-radius: 2px;
+}
+.q-progress .dot.done { background: var(--green); }
+.q-progress .dot.miss { background: var(--accent); }
+.q-progress .dot.current { background: var(--ink); }
+
+.q-prompt {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.q-prompt .word {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01" on;
+  line-height: 1.15;
+}
+.q-prompt .meta {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.q-prompt .sentence {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.45;
+  text-align: left;
+  font-feature-settings: "ss01" on;
+}
+.q-prompt .sentence em.target {
+  background: rgba(184,138,44,0.18);
+  font-style: italic;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+.q-options { display: flex; flex-direction: column; gap: 8px; }
+.q-opt {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  cursor: pointer;
+  min-height: 50px;
+  transition: all 0.12s ease;
+  width: 100%;
+  display: flex; align-items: center;
+}
+.q-opt:active { transform: scale(0.99); }
+.q-opt.right { background: var(--green-soft); border-color: var(--green); }
+.q-opt.wrong { background: var(--red-soft); border-color: var(--accent); }
+.q-opt.disabled { cursor: default; opacity: 0.65; }
+.q-opt.disabled.right { opacity: 1; }
+
+.feedback {
+  margin: 12px 0 4px 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  line-height: 1.45;
+  border: 1.5px solid;
+}
+.feedback.right { background: var(--green-soft); border-color: var(--green); color: var(--ink); }
+.feedback.wrong { background: var(--red-soft); border-color: var(--accent); color: var(--ink); }
+.feedback strong { font-family: 'Fraunces', serif; font-weight: 700; }
+
+/* RULES */
+.rule {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.rule .rule-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.rule .rule-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.rule .rule-body { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+.rule .ex {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper-2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  border-left: 2px solid var(--gold);
+  line-height: 1.5;
+}
+.rule .ex em { font-style: italic; font-weight: 500; }
+.rule .ex .hi { color: var(--accent); font-weight: 700; }
+.rule .ex.wrong { border-left-color: var(--accent); opacity: 0.65; text-decoration: line-through; text-decoration-color: var(--accent); font-style: italic; }
+.rule .ex.wrong em { font-style: normal; font-weight: 600; }
+
+/* LISTS / TABLES */
+.list-table {
+  background: #fbf6ea;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.list-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  border-bottom: 1px solid var(--paper-3);
+  padding: 10px 14px;
+  font-size: 14.5px;
+  align-items: baseline;
+}
+.list-row:last-child { border-bottom: none; }
+.list-row .w {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
+}
+.list-row .d { color: var(--ink-2); line-height: 1.4; }
+.list-row .d em { color: var(--ink-3); font-style: italic; font-family: 'Fraunces', serif; }
+
+/* CHIP */
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.chip {
+  background: var(--paper-2);
+  border: 1.5px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-family: 'Fraunces', serif;
+}
+.chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* SCORE */
+.score-screen {
+  text-align: center;
+  padding: 30px 16px 16px 16px;
+}
+.score-screen .score-pct {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+  font-size: 72px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.score-screen .score-pct .small { font-size: 36px; opacity: 0.5; }
+.score-screen .score-msg {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 8px 0 6px 0;
+  letter-spacing: -0.01em;
+}
+.score-screen .score-sub {
+  color: var(--ink-3);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+.review-list { text-align: left; }
+.review-row {
+  background: var(--red-soft);
+  border-left: 3px solid var(--accent);
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.review-row .rw-q { font-weight: 600; margin-bottom: 4px; }
+.review-row .rw-a { color: var(--ink-2); font-size: 13.5px; }
+.review-row .rw-a em { font-style: italic; font-family: 'Fraunces', serif; color: var(--accent); }
+
+/* MISC */
+.note {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  font-style: italic;
+  font-family: 'Fraunces', serif;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.45;
+}
+.spacer-12 { height: 12px; }
+.spacer-20 { height: 20px; }
+hr.divider { border: none; border-top: 1px dashed var(--line); margin: 18px 0; }
+
+.helper-toolbar {
+  display: flex; gap: 6px; margin: 8px 0 4px 0; flex-wrap: wrap;
+}
+.helper-toolbar .btn { flex: 0 0 auto; padding: 8px 12px; font-size: 12.5px; min-height: 36px; width: auto; }
+
+/* ACCENT BAR for grammar examples */
+.italicz { font-style: italic; }
+.quoted::before { content: '"'; }
+.quoted::after { content: '"'; }
+
+/* Mastery legend */
+.legend {
+  display: flex; gap: 12px; font-size: 11.5px; color: var(--ink-3);
+  justify-content: center; margin: 8px 0 4px 0;
+}
+.legend span { display: inline-flex; align-items: center; gap: 4px; }
+.legend .dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+}
+.legend .dot.g { background: var(--green); }
+.legend .dot.y { background: var(--gold); }
+.legend .dot.r { background: var(--accent); }
+
+/* Footer reset */
+.footer-actions {
+  margin: 28px 0 0 0;
+  padding: 14px 0;
+  border-top: 1px dashed var(--line);
+  text-align: center;
+}
+.footer-actions a {
+  font-size: 12px; color: var(--ink-3);
+  text-decoration: underline; cursor: pointer;
+  font-family: 'Fraunces', serif; font-style: italic;
+}
+
+.fade-in { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 380px) {
+  .flash .word { font-size: 32px; }
+  .q-prompt .word { font-size: 26px; }
+  .dash-pct { font-size: 54px; }
+  .stat .n { font-size: 18px; }
+  .tab { font-size: 12px; padding: 9px 4px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<div class="head">
+  <div>
+    <div class="title serif">English 9 Final Prep</div>
+    <div class="subtitle">Vocab · Commas · Quotes &amp; Italics · Apostrophes</div>
+  </div>
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<div id="view"></div>
+
+<div class="footer-actions">
+  <a id="resetLink">Reset all progress</a>
+</div>
+
+</div>
+
+<script>
+"use strict";
+
+/* ============ DATA: VOCAB ============ */
+const VOCAB = [
+  // LIST 1
+  { w: "Oblivious", pos: "adj.", list: 1, def: "Unaware; not noticing what's happening around you.", ex: "She walked through the crowd, oblivious to the cameras pointed at her." },
+  { w: "Manifested", pos: "verb", list: 1, def: "Showed or revealed clearly; made obvious.", ex: "His talent manifested itself the first time he picked up the guitar." },
+  { w: "Paranoia", pos: "noun", list: 1, def: "An intense, irrational distrust or suspicion of others.", ex: "After the strange phone call, he was gripped by paranoia for days." },
+  { w: "Sublime", pos: "adj.", list: 1, def: "So beautiful or impressive it almost takes your breath away.", ex: "The view from the cliff at sunset was absolutely sublime." },
+  { w: "Disdain", pos: "noun", list: 1, def: "A strong feeling that something is beneath you; contempt.", ex: "She looked at the cheap plastic trophy with open disdain." },
+  { w: "Transfixed", pos: "verb", list: 1, def: "Frozen in place, unable to look away.", ex: "The audience was transfixed by the magician's final trick." },
+  { w: "Intelligible", pos: "adj.", list: 1, def: "Able to be understood; clear enough to make sense of.", ex: "He spoke so quickly that almost nothing he said was intelligible." },
+  { w: "Assent", pos: "noun/verb", list: 1, def: "Agreement or approval; to agree.", ex: "She gave a quiet nod of assent and signed the form." },
+  { w: "Idiosyncrasy", pos: "noun", list: 1, def: "A quirky, personal habit unique to one person.", ex: "Tapping his pencil three times before writing was a strange idiosyncrasy of his." },
+  { w: "Converge", pos: "verb", list: 1, def: "To come together from different directions to meet at one point.", ex: "Reporters began to converge on the courthouse steps." },
+  { w: "Explicit", pos: "adj.", list: 1, def: "Stated clearly and directly, leaving no room for doubt.", ex: "Her instructions were explicit: be home before midnight." },
+  { w: "Implicate", pos: "verb", list: 1, def: "To suggest someone is involved, usually in something bad.", ex: "The email seemed to implicate the manager in the scheme." },
+  { w: "Emulate", pos: "verb", list: 1, def: "To try to be like someone or do as well as them.", ex: "Younger players in the league try to emulate his footwork." },
+  { w: "Eloquent", pos: "adj.", list: 1, def: "Skilled at expressing ideas clearly and persuasively.", ex: "Her eloquent speech moved the entire audience to tears." },
+  { w: "Inadvertent", pos: "adj.", list: 1, def: "Not done on purpose; accidental.", ex: "His inadvertent slip of the tongue gave away the surprise." },
+
+  // LIST 2
+  { w: "Exasperated", pos: "adj.", list: 2, def: "Extremely annoyed; out of patience.", ex: "After explaining it three times, she let out an exasperated sigh." },
+  { w: "Furtive", pos: "adj.", list: 2, def: "Sneaky; done quietly to avoid being noticed.", ex: "He cast a furtive glance at the answer key on the desk.", forms: "Furtively (adv.)" },
+  { w: "Resignation", pos: "noun", list: 2, def: "Quiet acceptance of something bad you can't change.", ex: "With a sigh of resignation, he picked up the broken pieces." },
+  { w: "Vindicate", pos: "verb", list: 2, def: "To clear someone of blame; to prove them right.", ex: "The new evidence vindicated the witness's earlier story." },
+  { w: "Forlorn", pos: "adj.", list: 2, def: "Sad and lonely; pitifully abandoned.", ex: "The forlorn puppy sat by the door waiting for its owner.", forms: "Forlornly (adv.)" },
+  { w: "Exuberant", pos: "adj.", list: 2, def: "Bursting with energy, excitement, or joy.", ex: "She gave an exuberant cheer when her name was called." },
+  { w: "Flippant", pos: "adj.", list: 2, def: "Not showing enough respect or seriousness; sarcastic.", ex: "His flippant answer earned him a glare from the teacher.", forms: "Flippancy (noun)" },
+  { w: "Precarious", pos: "adj.", list: 2, def: "Dangerously unstable; uncertain.", ex: "The ladder was in a precarious position against the icy wall.", forms: "Precariously (adv.)" },
+  { w: "Coquettish", pos: "adj.", list: 2, def: "Playfully flirtatious.", ex: "She gave him a coquettish smile across the room.", forms: "Coquettishly (adv.)" },
+  { w: "Rebuff", pos: "verb/noun", list: 2, def: "To sharply reject or refuse; a snub.", ex: "Every offer of help was met with a cold rebuff." },
+  { w: "Eccentric", pos: "adj.", list: 2, def: "Unusual or strange in a quirky way.", ex: "Their eccentric uncle collected antique typewriters and wore mismatched socks." },
+  { w: "Plaintive", pos: "adj.", list: 2, def: "Sounding sad and mournful.", ex: "A plaintive violin melody drifted from the open window.", forms: "Plaintively (adv.)" },
+  { w: "Feeble", pos: "adj.", list: 2, def: "Weak; lacking strength or force.", ex: "He made a feeble attempt to lift the box and gave up." },
+  { w: "Neurotic", pos: "adj.", list: 2, def: "Overly anxious or obsessive about something.", ex: "She has a neurotic habit of checking the locks five times." },
+  { w: "Incredulous", pos: "adj.", list: 2, def: "Unable or unwilling to believe something; skeptical.", ex: "He stared at her with an incredulous look when she said she'd won the lottery.", forms: "Incredulously (adv.)" },
+
+  // LIST 3 — Letter from a Birmingham Jail
+  { w: "Complacency", pos: "noun", list: 3, def: "Smug self-satisfaction that keeps you from trying to improve.", ex: "King warned that complacency among moderates was a bigger threat than open hatred." },
+  { w: "Relegate", pos: "verb", list: 3, def: "To push someone or something down to a lower position.", ex: "He was relegated to second-string after missing practice." },
+  { w: "Cognizant", pos: "adj.", list: 3, def: "Aware; having knowledge of something.", ex: "She was fully cognizant of the risks before agreeing." },
+  { w: "Moratorium", pos: "noun", list: 3, def: "A temporary pause or official ban on an activity.", ex: "The city placed a moratorium on new construction near the river." },
+  { w: "Incorrigible", pos: "adj.", list: 3, def: "Impossible to correct or reform.", ex: "The class clown was a charming but incorrigible troublemaker." },
+  { w: "Repudiate", pos: "verb", list: 3, def: "To reject something completely; refuse to accept it.", ex: "The senator quickly moved to repudiate the controversial statement." },
+  { w: "Deplore", pos: "verb", list: 3, def: "To strongly disapprove of or condemn.", ex: "Most parents deplore the violence on the show." },
+  { w: "Admonish", pos: "verb", list: 3, def: "To warn or gently scold someone.", ex: "The coach admonished him for arriving late again." },
+  { w: "Solace", pos: "noun", list: 3, def: "Comfort during a time of sadness or distress.", ex: "She found solace in long walks after the funeral." },
+  { w: "Degenerate", pos: "verb/adj.", list: 3, def: "To get worse over time; to decline in quality or morals.", ex: "The debate quickly degenerated into a shouting match." },
+  { w: "Jeer", pos: "verb/noun", list: 3, def: "To mock or make fun of, often in a crowd.", ex: "The fans jeered when the call went against their team.", forms: "Jeering (adj.)" },
+  { w: "Bondage", pos: "noun", list: 3, def: "The state of being a slave or unable to escape.", ex: "King wrote of breaking the chains of bondage that still held his people." },
+  { w: "Repress", pos: "verb", list: 3, def: "To hold back or restrain forcefully; to push down emotions.", ex: "He tried hard to repress a laugh during the serious moment." },
+  { w: "Plight", pos: "noun", list: 3, def: "A difficult, unfortunate situation.", ex: "The documentary highlighted the plight of refugees fleeing the war." },
+  { w: "Embody", pos: "verb", list: 3, def: "To be a perfect example of an idea or quality.", ex: "She embodies everything a leader should be: calm, fair, and decisive." },
+
+  // LIST 4
+  { w: "Jocund", pos: "adj.", list: 4, def: "Cheerful and lighthearted; merry.", ex: "His jocund mood lifted the whole room." },
+  { w: "Effeminate", pos: "adj.", list: 4, def: "Having qualities traditionally seen as feminine, especially when said of a man (often used negatively).", ex: "Critics in his day called the actor effeminate for his graceful movements." },
+  { w: "Profane", pos: "adj./verb", list: 4, def: "Disrespectful of sacred things; vulgar; to treat with disrespect.", ex: "He was scolded for using profane language in church." },
+  { w: "Inexorable", pos: "adj.", list: 4, def: "Impossible to stop or change; relentless.", ex: "Time's inexorable march eventually weathers every stone." },
+  { w: "Languish", pos: "verb", list: 4, def: "To lose strength or vitality; to suffer from neglect.", ex: "His novel languished in a drawer for years before anyone read it." },
+  { w: "Solemnity", pos: "noun", list: 4, def: "The quality of being serious and dignified.", ex: "The ceremony was conducted with great solemnity." },
+  { w: "Strife", pos: "noun", list: 4, def: "Angry conflict or bitter disagreement.", ex: "Years of strife between the two families finally ended in peace." },
+  { w: "Chide", pos: "verb", list: 4, def: "To scold mildly; to express disapproval.", ex: "The teacher chided him for forgetting his homework again." },
+  { w: "Pernicious", pos: "adj.", list: 4, def: "Causing harm in a slow, subtle, or hidden way.", ex: "Gossip can have a pernicious effect on a friendship." },
+  { w: "Bawdy", pos: "adj.", list: 4, def: "Humorously rude or crude, usually about sex.", ex: "Shakespeare's plays are full of surprisingly bawdy jokes." },
+  { w: "Repose", pos: "noun/verb", list: 4, def: "Rest; peaceful calm.", ex: "After the long hike, she found repose by the fire." },
+  { w: "Invoke", pos: "verb", list: 4, def: "To call upon a higher power or authority; to bring something to mind.", ex: "He invoked his right to remain silent.", forms: "Invocation (noun)" },
+  { w: "Impetuous", pos: "adj.", list: 4, def: "Acting quickly without thinking; impulsive.", ex: "Romeo's impetuous decisions drive much of the play's tragedy." },
+  { w: "Rancor", pos: "noun", list: 4, def: "Bitter, long-lasting resentment.", ex: "He spoke of his old rival with surprising rancor." },
+  { w: "Garish", pos: "adj.", list: 4, def: "Excessively bright, showy, or tasteless.", ex: "The garish neon sign clashed with the quiet street." }
+];
+
+/* ============ DATA: COMMA RULES ============ */
+const COMMA_RULES = [
+  {
+    title: "Items in a Series",
+    body: "Use commas to separate three or more items in a list. The comma before the final 'and' (the Oxford comma) is required in most school writing.",
+    good: "She packed her bag with <span class='hi'>books</span>, <span class='hi'>snacks</span>, <span class='hi'>a notebook</span>, and a phone charger.",
+    bad: "She packed her bag with books snacks a notebook and a phone charger."
+  },
+  {
+    title: "Compound Sentences (FANBOYS)",
+    body: "When you join two complete sentences with For, And, Nor, But, Or, Yet, So, place a comma BEFORE the conjunction.",
+    good: "He studied for hours<span class='hi'>,</span> but he still felt unprepared.",
+    bad: "He studied for hours but he still felt unprepared."
+  },
+  {
+    title: "After Introductory Elements",
+    body: "Put a comma after an introductory word, phrase, or clause that comes before the main sentence.",
+    good: "<span class='hi'>After the long meeting,</span> we finally went home.",
+    bad: "After the long meeting we finally went home."
+  },
+  {
+    title: "Around Nonessential Information",
+    body: "Use commas (a pair) around extra information that can be removed without changing the main meaning. If removing it would change the meaning, don't use commas.",
+    good: "My older brother<span class='hi'>,</span> who lives in Chicago<span class='hi'>,</span> is visiting next week.",
+    bad: "My older brother who lives in Chicago is visiting next week. (only correct if you have multiple brothers)"
+  },
+  {
+    title: "Direct Address",
+    body: "When you speak directly to someone by name, set the name off with commas.",
+    good: "<span class='hi'>Trey,</span> please pass the salt. / I think<span class='hi'>,</span> Mom<span class='hi'>,</span> that you're right.",
+    bad: "Trey please pass the salt."
+  },
+  {
+    title: "Dialogue Tags",
+    body: "Use a comma to separate a quotation from a speaker tag (like 'he said'). The comma goes inside the quotation marks.",
+    good: "\"I'll be there soon<span class='hi'>,</span>\" she said. / He whispered<span class='hi'>,</span> \"Look behind you.\"",
+    bad: "\"I'll be there soon\" she said."
+  },
+  {
+    title: "Coordinate Adjectives",
+    body: "Use a comma between two adjectives if you could swap them or put 'and' between them. Don't use one if you can't.",
+    good: "It was a <span class='hi'>dark, stormy</span> night. (You could say 'stormy, dark night' or 'dark and stormy.')",
+    bad: "It was a <span class='hi'>bright red</span> car. (Don't say 'red, bright' — no comma.)"
+  },
+  {
+    title: "Dates and Addresses",
+    body: "Place commas between the day and year, after the year, and between parts of an address.",
+    good: "On <span class='hi'>July 4, 1776,</span> independence was declared. / She lives in <span class='hi'>Dexter, Michigan,</span> with her family.",
+    bad: "On July 4 1776 independence was declared."
+  },
+  {
+    title: "Transitional Words",
+    body: "Set off words like 'however,' 'therefore,' 'for example,' and 'meanwhile' with commas when they interrupt or open a sentence.",
+    good: "<span class='hi'>However,</span> he didn't agree. / The plan<span class='hi'>,</span> however<span class='hi'>,</span> failed.",
+    bad: "He didn't however agree."
+  }
+];
+
+/* ============ DATA: COMMA PRACTICE ============ */
+const COMMA_Q = [
+  { q: "Which sentence is correctly punctuated?",
+    options: [
+      "I bought apples, oranges, and bananas at the store.",
+      "I bought apples oranges, and bananas at the store.",
+      "I bought, apples, oranges, and bananas, at the store.",
+      "I bought apples, oranges and, bananas at the store."
+    ],
+    answer: 0,
+    rule: "Items in a series — separate every item including the last one before 'and.'" },
+
+  { q: "Pick the correctly punctuated sentence.",
+    options: [
+      "He wanted to come but his car broke down.",
+      "He wanted to come, but his car broke down.",
+      "He wanted to come but, his car broke down.",
+      "He wanted, to come, but his car broke down."
+    ],
+    answer: 1,
+    rule: "Compound sentence — comma BEFORE the conjunction (FANBOYS) when joining two complete sentences." },
+
+  { q: "Choose the correct sentence.",
+    options: [
+      "After the game ended we went out for pizza.",
+      "After, the game ended we went out for pizza.",
+      "After the game ended, we went out for pizza.",
+      "After the game, ended we went out for pizza."
+    ],
+    answer: 2,
+    rule: "Introductory clause — comma after it, before the main sentence." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "My friend Jake who plays varsity is hosting the party.",
+      "My friend, Jake who plays varsity, is hosting the party.",
+      "My friend Jake, who plays varsity, is hosting the party.",
+      "My friend Jake, who, plays varsity is hosting the party."
+    ],
+    answer: 2,
+    rule: "Nonessential clause — set off with a PAIR of commas." },
+
+  { q: "Pick the correctly punctuated sentence.",
+    options: [
+      "Mom can I borrow the car tonight?",
+      "Mom, can I borrow the car tonight?",
+      "Mom can I, borrow the car tonight?",
+      "Mom can, I borrow, the car tonight?"
+    ],
+    answer: 1,
+    rule: "Direct address — set off the person's name with a comma." },
+
+  { q: "Choose the correct sentence with dialogue.",
+    options: [
+      "\"I'm tired\" he said.",
+      "\"I'm tired,\" he said.",
+      "\"I'm tired\", he said.",
+      "\"I'm tired,\" he said,."
+    ],
+    answer: 1,
+    rule: "Dialogue — comma goes INSIDE the closing quotation mark before the speaker tag." },
+
+  { q: "Which sentence uses commas correctly?",
+    options: [
+      "It was a long boring movie.",
+      "It was a long, boring movie.",
+      "It was, a long, boring movie.",
+      "It was a long boring, movie."
+    ],
+    answer: 1,
+    rule: "Coordinate adjectives — 'long and boring' both work, so use a comma between them." },
+
+  { q: "Pick the correct sentence.",
+    options: [
+      "She moved to Austin Texas in 2019.",
+      "She moved to Austin, Texas in 2019.",
+      "She moved to Austin, Texas, in 2019.",
+      "She moved, to Austin, Texas in 2019."
+    ],
+    answer: 2,
+    rule: "Place + state — commas before AND after the state, even mid-sentence." },
+
+  { q: "Which is correctly punctuated?",
+    options: [
+      "However I still don't agree with you.",
+      "However, I still don't agree with you.",
+      "However I still don't, agree with you.",
+      "However I, still don't agree with you."
+    ],
+    answer: 1,
+    rule: "Transitional word at the start of a sentence — follow it with a comma." },
+
+  { q: "Choose the correct sentence.",
+    options: [
+      "I want pizza and fries please.",
+      "I want pizza, and fries please.",
+      "I want pizza, and fries, please.",
+      "I want pizza and fries, please."
+    ],
+    answer: 3,
+    rule: "Direct address — 'please' isn't a name, but the closing tag-like word 'please' at the end often takes a comma; only two items so no series comma needed." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "On December 7 1941 the U.S. entered the war.",
+      "On December 7, 1941 the U.S. entered the war.",
+      "On December 7, 1941, the U.S. entered the war.",
+      "On December, 7, 1941, the U.S. entered the war."
+    ],
+    answer: 2,
+    rule: "Date — comma between day and year, AND a comma after the year mid-sentence." },
+
+  { q: "Pick the correct sentence.",
+    options: [
+      "The dog wagging its tail ran to the door.",
+      "The dog, wagging its tail, ran to the door.",
+      "The dog, wagging its tail ran to the door.",
+      "The dog wagging, its tail, ran to the door."
+    ],
+    answer: 1,
+    rule: "Nonessential participial phrase — set off with a pair of commas." },
+
+  { q: "Which is correctly punctuated?",
+    options: [
+      "He grabbed his jacket his keys and his phone.",
+      "He grabbed his jacket, his keys and his phone.",
+      "He grabbed his jacket, his keys, and his phone.",
+      "He grabbed, his jacket his keys, and his phone."
+    ],
+    answer: 2,
+    rule: "Series of three — commas between each item, including before the 'and.'" },
+
+  { q: "Pick the correctly punctuated sentence.",
+    options: [
+      "Although it was raining we walked to the park.",
+      "Although, it was raining we walked to the park.",
+      "Although it was raining, we walked to the park.",
+      "Although it was raining we walked, to the park."
+    ],
+    answer: 2,
+    rule: "Subordinate clause at the start — comma before the main clause." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "\"Where are you going?\" she asked.",
+      "\"Where are you going,\" she asked?",
+      "\"Where are you going?,\" she asked.",
+      "\"Where are you going\"? she asked."
+    ],
+    answer: 0,
+    rule: "Question inside quotes — keep the question mark, NO extra comma. Question mark goes inside the quote." },
+
+  { q: "Choose the correct sentence.",
+    options: [
+      "Trey who is fifteen plays volleyball.",
+      "Trey, who is fifteen, plays volleyball.",
+      "Trey, who is fifteen plays volleyball.",
+      "Trey who is fifteen, plays volleyball."
+    ],
+    answer: 1,
+    rule: "Nonessential 'who' clause about a specific person — pair of commas." },
+
+  { q: "Which is correct?",
+    options: [
+      "The project was difficult yet rewarding.",
+      "The project was difficult, yet rewarding.",
+      "The project was difficult, yet, rewarding.",
+      "The project, was difficult yet rewarding."
+    ],
+    answer: 0,
+    rule: "'Yet' here joins two adjectives, NOT two complete sentences — no comma needed." },
+
+  { q: "Pick the correct sentence.",
+    options: [
+      "My teacher said \"Bring a pencil tomorrow.\"",
+      "My teacher said, \"Bring a pencil tomorrow.\"",
+      "My teacher said \"Bring a pencil tomorrow\".",
+      "My teacher, said, \"Bring a pencil tomorrow.\""
+    ],
+    answer: 1,
+    rule: "Speaker tag BEFORE a quote — comma after 'said,' period inside the quotation marks." }
+];
+
+/* ============ DATA: QUOTES & ITALICS RULES ============ */
+const QI_RULES = [
+  {
+    title: "Quotation Marks for Short Works",
+    body: "Use \"quotation marks\" around titles of SHORT works that are usually published inside something bigger: short stories, poems, articles, songs, episodes of a show, chapters of a book.",
+    good: "We read <span class='hi'>\"The Most Dangerous Game\"</span> last week. / Her favorite song is <span class='hi'>\"Hey Jude.\"</span>",
+    bad: "We read The Most Dangerous Game last week."
+  },
+  {
+    title: "Italics for Long Works",
+    body: "Use italics for titles of LONG, standalone works: books, plays, movies, albums, magazines, newspapers, TV series, video games, and works of art.",
+    good: "He's reading <em>To Kill a Mockingbird</em>. / She subscribes to <em>The New York Times</em>.",
+    bad: "He's reading \"To Kill a Mockingbird.\""
+  },
+  {
+    title: "The 'Big vs. Small' Trick",
+    body: "If a work could be part of something bigger, use quotes. If it stands alone, use italics. A song is in an album, a poem is in a collection, a short story is in a book → quotes. The album, book, or movie itself → italics.",
+    good: "<span class='hi'>\"Yesterday\"</span> is on the album <em>Help!</em> / <span class='hi'>\"The Raven\"</span> appears in <em>The Complete Poems of Edgar Allan Poe</em>.",
+    bad: ""
+  },
+  {
+    title: "Direct Quotations",
+    body: "Use quotation marks around someone's exact words. Commas and periods always go INSIDE the closing quotation mark in American English.",
+    good: "She said<span class='hi'>,</span> <span class='hi'>\"I'll think about it.\"</span> / <span class='hi'>\"I won't be late,\"</span> he promised.",
+    bad: "She said \"I'll think about it\"."
+  },
+  {
+    title: "Question Marks & Exclamation Points",
+    body: "If the question/exclamation is part of the QUOTE, put it inside the quotes. If it's part of the WHOLE sentence, put it outside.",
+    good: "She asked<span class='hi'>,</span> <span class='hi'>\"Are you ready?\"</span> / Did he really say <span class='hi'>\"I quit\"</span>?",
+    bad: ""
+  },
+  {
+    title: "Foreign Words & Words as Words",
+    body: "Use italics for non-English words that aren't common in English yet, and for a word being discussed as a word.",
+    good: "The French call it <em>déjà vu</em>. / The word <em>literally</em> is often used incorrectly.",
+    bad: "The French call it 'déjà vu.'"
+  },
+  {
+    title: "Names of Vehicles & Ships",
+    body: "Italicize the names of specific ships, planes, trains, and spacecraft.",
+    good: "The <em>Titanic</em> sank in 1912. / The <em>Apollo 11</em> mission landed on the moon.",
+    bad: "The \"Titanic\" sank in 1912."
+  },
+  {
+    title: "Italics for Emphasis (Use Sparingly)",
+    body: "You CAN italicize a word for emphasis, but use this sparingly. Overdoing it makes your writing look amateur.",
+    good: "I never said he stole it; I said he <em>found</em> it.",
+    bad: "I <em>never</em> said <em>he</em> stole <em>it</em>; I <em>said</em> he <em>found</em> it."
+  },
+  {
+    title: "Quote Inside a Quote",
+    body: "If you're already inside quotation marks and need to quote something else, use single quotes ' ' inside the double quotes \" \".",
+    good: "He said<span class='hi'>,</span> \"My favorite line is <span class='hi'>'To be or not to be.'</span>\"",
+    bad: "He said, \"My favorite line is \"To be or not to be.\"\""
+  }
+];
+
+/* ============ DATA: Q/I PRACTICE ============ */
+const QI_Q = [
+  { q: "How should the title of the novel To Kill a Mockingbird be formatted in a paper?",
+    options: [
+      "\"To Kill a Mockingbird\" (quotation marks)",
+      "To Kill a Mockingbird (italics)",
+      "TO KILL A MOCKINGBIRD (all caps)",
+      "To Kill a Mockingbird (no formatting)"
+    ],
+    answer: 1,
+    rule: "Books are long, standalone works → italics." },
+
+  { q: "How should the title of the poem 'The Raven' be formatted?",
+    options: [
+      "\"The Raven\" (quotation marks)",
+      "The Raven (italics)",
+      "The Raven (no formatting)",
+      "'The Raven' (single quotes)"
+    ],
+    answer: 0,
+    rule: "Poems are short works (often part of a collection) → quotation marks." },
+
+  { q: "Which is correctly formatted?",
+    options: [
+      "I love the song \"Bohemian Rhapsody\" from the album \"A Night at the Opera.\"",
+      "I love the song Bohemian Rhapsody from the album A Night at the Opera.",
+      "I love the song \"Bohemian Rhapsody\" from the album A Night at the Opera. (album italicized)",
+      "I love the song A Night at the Opera from the album Bohemian Rhapsody."
+    ],
+    answer: 2,
+    rule: "Songs (short, part of an album) → quotes. Albums (standalone) → italics." },
+
+  { q: "Where do periods go in American English?",
+    options: [
+      "Always outside the closing quotation mark.",
+      "Always inside the closing quotation mark.",
+      "Outside if the quote is a complete sentence, inside if not.",
+      "It doesn't matter."
+    ],
+    answer: 1,
+    rule: "American English: periods and commas ALWAYS go inside the closing quotation mark." },
+
+  { q: "Choose the correctly punctuated sentence.",
+    options: [
+      "She whispered, \"I can't believe it.\"",
+      "She whispered, \"I can't believe it\".",
+      "She whispered \"I can't believe it.\"",
+      "She whispered, \"I can't believe it\"."
+    ],
+    answer: 0,
+    rule: "Comma after the speaker tag, period INSIDE the closing quote." },
+
+  { q: "How should the movie Romeo and Juliet be formatted?",
+    options: [
+      "\"Romeo and Juliet\"",
+      "Romeo and Juliet (italics)",
+      "ROMEO AND JULIET",
+      "Romeo and Juliet (no formatting)"
+    ],
+    answer: 1,
+    rule: "Movies are long, standalone works → italics." },
+
+  { q: "Which sentence is correctly formatted?",
+    options: [
+      "His favorite short story is The Most Dangerous Game.",
+      "His favorite short story is \"The Most Dangerous Game.\"",
+      "His favorite short story is 'The Most Dangerous Game.'",
+      "His favorite short story is The Most Dangerous Game (italicized)."
+    ],
+    answer: 1,
+    rule: "Short stories are short works (usually inside a larger book) → quotation marks." },
+
+  { q: "Where should the question mark go?",
+    options: [
+      "Did she actually say \"I'm leaving?\"",
+      "Did she actually say, \"I'm leaving\"?",
+      "Did she actually say \"I'm leaving\"?",
+      "Did she actually say, \"I'm leaving?\""
+    ],
+    answer: 2,
+    rule: "The question is part of the WHOLE sentence, not the quote — so the question mark goes OUTSIDE." },
+
+  { q: "Which is correct?",
+    options: [
+      "She read \"a chapter of\" the book.",
+      "She read a chapter of \"the book.\"",
+      "Her favorite chapter is \"The Wedding\" from Pride and Prejudice (italicized).",
+      "Her favorite chapter is Pride and Prejudice from \"The Wedding.\""
+    ],
+    answer: 2,
+    rule: "Chapter title → quotes (short part of bigger work). Book title → italics." },
+
+  { q: "How should you format a quote within a quote?",
+    options: [
+      "\"He said \"hello\" to me.\"",
+      "\"He said 'hello' to me.\"",
+      "'He said \"hello\" to me.'",
+      "He said hello to me."
+    ],
+    answer: 1,
+    rule: "Inside double quotes, use single quotes for an inner quotation." },
+
+  { q: "Choose the correct sentence.",
+    options: [
+      "The Spanish word for 'hello' is hola.",
+      "The Spanish word for \"hello\" is \"hola.\"",
+      "The Spanish word for hello is <em>hola</em>. (hola italicized)",
+      "The Spanish word for hello is HOLA."
+    ],
+    answer: 2,
+    rule: "Foreign words still considered foreign in English → italics. (And 'hello' here is being discussed as a word, often italicized too.)" },
+
+  { q: "How should the TV series Stranger Things be formatted?",
+    options: [
+      "\"Stranger Things\" (quotes)",
+      "Stranger Things (italics)",
+      "STRANGER THINGS",
+      "Stranger Things (no formatting)"
+    ],
+    answer: 1,
+    rule: "Whole TV series (standalone work) → italics. Individual EPISODES → quotation marks." },
+
+  { q: "Which is correctly formatted?",
+    options: [
+      "My favorite episode of \"Stranger Things\" is The Bathtub.",
+      "My favorite episode of Stranger Things (italicized) is \"The Bathtub.\"",
+      "My favorite episode of \"Stranger Things\" is \"The Bathtub.\"",
+      "My favorite episode of Stranger Things is The Bathtub."
+    ],
+    answer: 1,
+    rule: "Series → italics; individual episode → quotes." },
+
+  { q: "How should the newspaper The New York Times be formatted?",
+    options: [
+      "\"The New York Times\"",
+      "The New York Times (italics)",
+      "THE NEW YORK TIMES",
+      "The New York Times (no formatting)"
+    ],
+    answer: 1,
+    rule: "Newspapers are standalone publications → italics." },
+
+  { q: "Which sentence uses italics correctly?",
+    options: [
+      "I <em>really really really</em> want to go.",
+      "I <em>really</em> want to go.",
+      "I really want to <em>go</em>.",
+      "Both 2 and 3 are fine in moderation."
+    ],
+    answer: 3,
+    rule: "Italics for emphasis is fine — but use it sparingly. Over-italicizing every word kills the effect." },
+
+  { q: "How should you format the name of the ship Titanic?",
+    options: [
+      "\"Titanic\"",
+      "Titanic (italics)",
+      "TITANIC",
+      "Titanic (no formatting)"
+    ],
+    answer: 1,
+    rule: "Specific named ships, planes, and spacecraft → italics." },
+
+  { q: "Pick the correct sentence.",
+    options: [
+      "He said, \"I'll see you tomorrow,\" and walked away.",
+      "He said \"I'll see you tomorrow\" and walked away.",
+      "He said, \"I'll see you tomorrow\", and walked away.",
+      "He said, \"I'll see you tomorrow.\" and walked away."
+    ],
+    answer: 0,
+    rule: "Comma after speaker tag, comma INSIDE closing quote, sentence continues after." },
+
+  { q: "Which sentence is correctly formatted?",
+    options: [
+      "The article \"How to Study Smarter\" was published in Time magazine.",
+      "The article How to Study Smarter was published in \"Time\" magazine.",
+      "The article \"How to Study Smarter\" was published in Time (italics) magazine.",
+      "The article How to Study Smarter was published in Time magazine."
+    ],
+    answer: 2,
+    rule: "Magazine article (short) → quotes. Magazine name (standalone) → italics." }
+];
+
+/* ============ DATA: APOSTROPHE RULES ============ */
+const APOS_RULES = [
+  {
+    title: "Contractions",
+    body: "An apostrophe stands in for missing letters when two words are squished together. The apostrophe goes EXACTLY where the missing letters were.",
+    good: "do not → <span class='hi'>don't</span> / will not → <span class='hi'>won't</span> / it is → <span class='hi'>it's</span> / they are → <span class='hi'>they're</span>",
+    bad: "dont · wont · its (when you mean 'it is') · theyre"
+  },
+  {
+    title: "Singular Possessive: add 's",
+    body: "To show ONE person or thing owns something, add apostrophe + s. This is true even when the word already ends in s.",
+    good: "the dog<span class='hi'>'s</span> bone / James<span class='hi'>'s</span> car / the boss<span class='hi'>'s</span> office",
+    bad: "the dogs bone · James car · the boss office"
+  },
+  {
+    title: "Plural Possessive (ending in s): just add '",
+    body: "When MULTIPLE things own something and the plural already ends in s, just add an apostrophe AFTER the s. Don't add another s.",
+    good: "the dogs<span class='hi'>'</span> bones (many dogs) / the students<span class='hi'>'</span> lockers / both teams<span class='hi'>'</span> uniforms",
+    bad: "the dogs's bones · the students lockers"
+  },
+  {
+    title: "Plural Possessive (NOT ending in s): add 's",
+    body: "Irregular plurals like children, men, women, people don't end in s, so they get apostrophe + s just like singulars.",
+    good: "the children<span class='hi'>'s</span> toys / the men<span class='hi'>'s</span> locker room / the women<span class='hi'>'s</span> team",
+    bad: "the childrens toys · the mens locker room · the womens' team"
+  },
+  {
+    title: "It's vs Its (most-tested rule on Earth)",
+    body: "<strong>It's</strong> = it is OR it has (contraction, has apostrophe). <strong>Its</strong> = belonging to it (possessive, NO apostrophe). Trick: if you can swap in 'it is' and the sentence still makes sense, you want 'it's.'",
+    good: "<span class='hi'>It's</span> raining outside. (it is) / The cat licked <span class='hi'>its</span> paw. (possessive)",
+    bad: "The cat licked it's paw. · Its raining outside."
+  },
+  {
+    title: "Other Possessive Pronouns Have NO Apostrophe",
+    body: "Possessive pronouns never take apostrophes. The apostrophe versions are always contractions. Watch out for these matched pairs.",
+    good: "<span class='hi'>You're</span> (you are) vs <span class='hi'>your</span> (belonging to you) / <span class='hi'>They're</span> (they are) vs <span class='hi'>their</span> (belonging to them) vs <span class='hi'>there</span> (location) / <span class='hi'>Who's</span> (who is) vs <span class='hi'>whose</span> (belonging to who)",
+    bad: "Your going to love this. · Their going to bring there books."
+  },
+  {
+    title: "Don't Use Apostrophes for Plain Plurals",
+    body: "An apostrophe does NOT make a word plural. This mistake is so common it has a name: the grocer's apostrophe. To make a regular noun plural, just add s. No apostrophe needed.",
+    good: "We sell <span class='hi'>apples</span>. / The <span class='hi'>Smiths</span> moved away. / Happy holidays from the <span class='hi'>Penns</span>.",
+    bad: "Fresh apple's for sale! · The Smith's moved away. · Happy holidays from the Penn's."
+  },
+  {
+    title: "Joint vs Separate Possession",
+    body: "When two people OWN ONE THING TOGETHER, only the second name gets 's. When each owns their OWN separate thing, BOTH names get 's.",
+    good: "Mike and Erin<span class='hi'>'s</span> house (they share one house) / Mike<span class='hi'>'s</span> and Erin<span class='hi'>'s</span> cars (each has their own car)",
+    bad: ""
+  },
+  {
+    title: "Years and Decades",
+    body: "Plain numbers (years, decades) do NOT take an apostrophe to become plural. An apostrophe BEFORE the number stands in for missing digits.",
+    good: "the <span class='hi'>1990s</span> were great (plural year, no apostrophe) / the <span class='hi'>'90s</span> were great (apostrophe replaces '19')",
+    bad: "the 1990's were great · the 90's were great · the '90's were great"
+  }
+];
+
+/* ============ DATA: APOSTROPHE PRACTICE ============ */
+const APOS_Q = [
+  { q: "Which sentence is correct?",
+    options: [
+      "The dog's wagging it's tail.",
+      "The dog's wagging its tail.",
+      "The dogs wagging its tail.",
+      "The dogs' wagging it's tail."
+    ],
+    answer: 1,
+    rule: "<strong>Its</strong> is the possessive (no apostrophe). <strong>It's</strong> is the contraction of 'it is.' The cat doesn't 'it is' its tail — it owns its tail." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "The childrens' toys are everywhere.",
+      "The childrens toys are everywhere.",
+      "The children's toys are everywhere.",
+      "The childrens's toys are everywhere."
+    ],
+    answer: 2,
+    rule: "'Children' is an irregular plural that doesn't end in s, so it takes apostrophe + s just like a singular." },
+
+  { q: "Multiple students lost their lockers' contents. Which is correct?",
+    options: [
+      "The students' lockers were inspected.",
+      "The student's lockers were inspected.",
+      "The students lockers were inspected.",
+      "The students's lockers were inspected."
+    ],
+    answer: 0,
+    rule: "Plural noun ending in s, showing possession → just add an apostrophe AFTER the s." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "Whose going to the game tonight?",
+      "Who's going to the game tonight?",
+      "Whos going to the game tonight?",
+      "Whose' going to the game tonight?"
+    ],
+    answer: 1,
+    rule: "<strong>Who's</strong> = who is (contraction). <strong>Whose</strong> is the possessive (no apostrophe), as in 'Whose car is this?'" },
+
+  { q: "You're writing a sign for a fruit stand. Which is correct?",
+    options: [
+      "Fresh apple's for sale!",
+      "Fresh apples' for sale!",
+      "Fresh apples for sale!",
+      "Fresh Apple's for sale!"
+    ],
+    answer: 2,
+    rule: "An apostrophe does NOT make a word plural. This is the classic 'grocer's apostrophe' mistake. Plain plural → just add s." },
+
+  { q: "Mike and Erin live together. Which is correct?",
+    options: [
+      "Mike and Erin's house is on Maple Street.",
+      "Mike's and Erin's house is on Maple Street.",
+      "Mikes and Erins house is on Maple Street.",
+      "Mike and Erins' house is on Maple Street."
+    ],
+    answer: 0,
+    rule: "Joint possession (they share ONE house) → only the LAST name gets 's." },
+
+  { q: "Which is the correct way to write about the decade?",
+    options: [
+      "The 90's were a great decade for music.",
+      "The 90s' were a great decade for music.",
+      "The '90s were a great decade for music.",
+      "The '90's were a great decade for music."
+    ],
+    answer: 2,
+    rule: "Apostrophe before the number replaces '19' (missing digits). No apostrophe after — it's a plural, not a possessive." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "Your going to love this movie.",
+      "You're going to love this movie.",
+      "Youre going to love this movie.",
+      "Your' going to love this movie."
+    ],
+    answer: 1,
+    rule: "<strong>You're</strong> = you are (contraction). <strong>Your</strong> is the possessive, as in 'your phone.'" },
+
+  { q: "James owns a car. Which is correct (modern style)?",
+    options: [
+      "James car is in the driveway.",
+      "Jame's car is in the driveway.",
+      "James's car is in the driveway.",
+      "Jameses car is in the driveway."
+    ],
+    answer: 2,
+    rule: "Singular possessive — add apostrophe + s even when the name ends in s. (Older style sometimes used just an apostrophe, but modern style is 'James's.')" },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "The cat licked it's paw clean.",
+      "The cat licked its paw clean.",
+      "The cat licked its' paw clean.",
+      "The cat licked it's' paw clean."
+    ],
+    answer: 1,
+    rule: "<strong>Its</strong> = belongs to it. The cat owns its paw. If you can swap in 'it is' and it doesn't make sense, you don't want the apostrophe." },
+
+  { q: "Which sentence is correctly punctuated?",
+    options: [
+      "I cant believe its almost summer.",
+      "I can't believe its almost summer.",
+      "I can't believe it's almost summer.",
+      "I cant believe it's almost summer."
+    ],
+    answer: 2,
+    rule: "Two contractions: <strong>can't</strong> (cannot) and <strong>it's</strong> (it is). Both need apostrophes for the missing letters." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "The mens locker room is down the hall.",
+      "The men's locker room is down the hall.",
+      "The mens' locker room is down the hall.",
+      "The mens's locker room is down the hall."
+    ],
+    answer: 1,
+    rule: "'Men' is an irregular plural (doesn't end in s), so it gets apostrophe + s for possession." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "They're going to bring there books over their.",
+      "Their going to bring they're books over there.",
+      "They're going to bring their books over there.",
+      "There going to bring their books over they're."
+    ],
+    answer: 2,
+    rule: "<strong>They're</strong> = they are. <strong>Their</strong> = belonging to them. <strong>There</strong> = location. All three appear here in their correct slots." },
+
+  { q: "Two teams both have dirty uniforms. Which is correct?",
+    options: [
+      "Both teams' uniforms were dirty after the game.",
+      "Both team's uniforms were dirty after the game.",
+      "Both teams uniforms were dirty after the game.",
+      "Both teams's uniforms were dirty after the game."
+    ],
+    answer: 0,
+    rule: "Plural (both teams) + ends in s + possession → just an apostrophe after the s." },
+
+  { q: "Sarah has her bedroom. Emma has her own bedroom. Which is correct?",
+    options: [
+      "Sarah's and Emma's bedrooms are upstairs.",
+      "Sarah and Emma's bedrooms are upstairs.",
+      "Sarah and Emmas' bedrooms are upstairs.",
+      "Sarahs and Emmas bedrooms are upstairs."
+    ],
+    answer: 0,
+    rule: "Separate possession (each has her OWN bedroom) → BOTH names get 's. Compare to joint possession where only the last name gets 's." },
+
+  { q: "Which sentence is correct?",
+    options: [
+      "Wont you come to the party?",
+      "Won't you come to the party?",
+      "Wo'nt you come to the party?",
+      "Won't' you come to the party?"
+    ],
+    answer: 1,
+    rule: "<strong>Won't</strong> is the contraction of 'will not.' The apostrophe goes where the missing letters were (between n and t)." },
+
+  { q: "One boss made a decision. Which is correct?",
+    options: [
+      "The bosss' decision was final.",
+      "The boss's decision was final.",
+      "The bosses' decision was final.",
+      "The boss decision was final."
+    ],
+    answer: 1,
+    rule: "Singular possessive — add apostrophe + s, even when the word already ends in s. ('Bosses' is the plural; 'bosses'' would be plural possessive.)" },
+
+  { q: "A holiday card from the entire Penn family. Which is correct?",
+    options: [
+      "Happy Holidays from The Penn's!",
+      "Happy Holidays from The Penns!",
+      "Happy Holidays from The Penns'!",
+      "Happy Holidays from The Penn!"
+    ],
+    answer: 1,
+    rule: "Plural family name with no possession → just add s. No apostrophe. This is the most common holiday card mistake in America." }
+];
+
+/* ============ STATE ============ */
+const STORAGE_KEY = "trey_eng9_v1";
+const defaultState = {
+  vocab: {},          // word -> { correct: int, streak: int, seen: int }
+  comma: {},          // qIdx -> { correct: int, seen: int }
+  qi: {},             // qIdx -> { correct: int, seen: int }
+  apos: {},           // qIdx -> { correct: int, seen: int }
+  mockHistory: [],    // [{ date, score, total, sections }]
+  bestMock: 0
+};
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return JSON.parse(JSON.stringify(defaultState));
+    const s = JSON.parse(raw);
+    return Object.assign(JSON.parse(JSON.stringify(defaultState)), s);
+  } catch (e) {
+    return JSON.parse(JSON.stringify(defaultState));
+  }
+}
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+}
+let state = loadState();
+
+/* ============ MASTERY HELPERS ============ */
+const MASTERY_STREAK = 2; // correct twice in a row = mastered
+
+function isVocabMastered(w) {
+  const r = state.vocab[w];
+  return !!(r && r.streak >= MASTERY_STREAK);
+}
+function vocabMasteredCount() {
+  return VOCAB.filter(v => isVocabMastered(v.w)).length;
+}
+function masteryLevel(record) {
+  if (!record || record.seen === 0) return "new";
+  if (record.streak >= MASTERY_STREAK) return "mastered";
+  if (record.correct >= 1) return "learning";
+  return "weak";
+}
+function recordVocab(word, right) {
+  const r = state.vocab[word] || { correct: 0, streak: 0, seen: 0 };
+  r.seen++;
+  if (right) { r.correct++; r.streak++; }
+  else { r.streak = 0; }
+  state.vocab[word] = r;
+  saveState();
+}
+function recordCommaQ(idx, right) {
+  const r = state.comma[idx] || { correct: 0, seen: 0 };
+  r.seen++; if (right) r.correct++;
+  state.comma[idx] = r; saveState();
+}
+function recordQI(idx, right) {
+  const r = state.qi[idx] || { correct: 0, seen: 0 };
+  r.seen++; if (right) r.correct++;
+  state.qi[idx] = r; saveState();
+}
+function recordApos(idx, right) {
+  const r = state.apos[idx] || { correct: 0, seen: 0 };
+  r.seen++; if (right) r.correct++;
+  state.apos[idx] = r; saveState();
+}
+function commaAccuracy() {
+  const seen = Object.values(state.comma).filter(r => r.seen > 0);
+  if (seen.length === 0) return { pct: 0, seen: 0, total: COMMA_Q.length, correct: 0 };
+  const correct = seen.reduce((a, r) => a + (r.correct > 0 ? 1 : 0), 0);
+  return { pct: Math.round(100 * correct / COMMA_Q.length), seen: seen.length, total: COMMA_Q.length, correct };
+}
+function qiAccuracy() {
+  const seen = Object.values(state.qi).filter(r => r.seen > 0);
+  if (seen.length === 0) return { pct: 0, seen: 0, total: QI_Q.length, correct: 0 };
+  const correct = seen.reduce((a, r) => a + (r.correct > 0 ? 1 : 0), 0);
+  return { pct: Math.round(100 * correct / QI_Q.length), seen: seen.length, total: QI_Q.length, correct };
+}
+function aposAccuracy() {
+  const seen = Object.values(state.apos).filter(r => r.seen > 0);
+  if (seen.length === 0) return { pct: 0, seen: 0, total: APOS_Q.length, correct: 0 };
+  const correct = seen.reduce((a, r) => a + (r.correct > 0 ? 1 : 0), 0);
+  return { pct: Math.round(100 * correct / APOS_Q.length), seen: seen.length, total: APOS_Q.length, correct };
+}
+
+/* Overall Test Ready %:
+   - 40% weight: vocab mastery (mastered / 60)
+   - 15% weight: comma practice (correct / total)
+   - 15% weight: q/i practice (correct / total)
+   - 15% weight: apostrophe practice (correct / total)
+   - 15% weight: best mock test score (capped at 85%+)
+*/
+function testReady() {
+  const vPct = vocabMasteredCount() / VOCAB.length;
+  const cPct = commaAccuracy().correct / COMMA_Q.length;
+  const qPct = qiAccuracy().correct / QI_Q.length;
+  const aPct = aposAccuracy().correct / APOS_Q.length;
+  const mPct = Math.min(state.bestMock / 85, 1);
+  const score = vPct * 0.40 + cPct * 0.15 + qPct * 0.15 + aPct * 0.15 + mPct * 0.15;
+  return Math.round(score * 100);
+}
+function statusMessage() {
+  const v = vocabMasteredCount();
+  const c = commaAccuracy();
+  const q = qiAccuracy();
+  const a = aposAccuracy();
+  const m = state.bestMock;
+
+  const todo = [];
+  if (v < VOCAB.length) todo.push(`Master <strong>${VOCAB.length - v}</strong> more vocab words`);
+  if (c.correct < COMMA_Q.length) todo.push(`Get <strong>${COMMA_Q.length - c.correct}</strong> more comma questions right`);
+  if (q.correct < QI_Q.length) todo.push(`Get <strong>${QI_Q.length - q.correct}</strong> more quote/italics right`);
+  if (a.correct < APOS_Q.length) todo.push(`Get <strong>${APOS_Q.length - a.correct}</strong> more apostrophe questions right`);
+  if (m < 85) todo.push(`Score <strong>85%+</strong> on one mock test`);
+
+  if (todo.length === 0) return "You're test ready. Locked in. 🎉";
+  if (todo.length === 1) return "Almost there. " + todo[0] + ".";
+  return todo.slice(0, 2).join(" · ");
+}
+
+/* ============ ROUTER ============ */
+const TABS = [
+  { id: "home", label: "Home" },
+  { id: "vocab", label: "Vocab" },
+  { id: "commas", label: "Commas" },
+  { id: "qi", label: "Quotes & Italics" },
+  { id: "apos", label: "Apostrophes" },
+  { id: "mock", label: "Mock Test" },
+  { id: "cheat", label: "Cheat Sheet" }
+];
+let currentTab = "home";
+
+function renderTabs() {
+  const tabsEl = document.getElementById("tabs");
+  tabsEl.style.gridTemplateColumns = `repeat(${Math.min(TABS.length, 3)}, 1fr)`;
+  // Two rows if more than 3
+  if (TABS.length > 3) tabsEl.style.gridTemplateColumns = "repeat(3, 1fr)";
+  tabsEl.innerHTML = TABS.map(t => `<button class="tab ${currentTab === t.id ? 'active' : ''}" data-tab="${t.id}">${t.label}</button>`).join("");
+  tabsEl.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => switchTab(b.dataset.tab)));
+}
+function switchTab(id) {
+  currentTab = id;
+  renderTabs();
+  render();
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+/* ============ RENDER ============ */
+function render() {
+  const view = document.getElementById("view");
+  view.classList.remove("fade-in");
+  void view.offsetWidth;
+  view.classList.add("fade-in");
+  switch (currentTab) {
+    case "home": renderHome(view); break;
+    case "vocab": renderVocab(view); break;
+    case "commas": renderCommas(view); break;
+    case "qi": renderQI(view); break;
+    case "apos": renderApos(view); break;
+    case "mock": renderMock(view); break;
+    case "cheat": renderCheat(view); break;
+  }
+}
+
+/* ---------- HOME ---------- */
+function renderHome(view) {
+  const tr = testReady();
+  const isReady = tr >= 90;
+  const v = vocabMasteredCount();
+  const c = commaAccuracy();
+  const q = qiAccuracy();
+  const a = aposAccuracy();
+  const m = state.bestMock;
+
+  const grammarCorrect = c.correct + q.correct + a.correct;
+  const grammarTotal = c.total + q.total + a.total;
+
+  view.innerHTML = `
+    <div class="dash-hero ${isReady ? 'ready' : ''}">
+      <div class="dash-eyebrow">Test Readiness</div>
+      <div class="dash-pct">${tr}<span class="small">%</span></div>
+      <div class="dash-status">${statusMessage()}</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">${v}<span style="color:var(--ink-3);font-weight:500;font-size:14px;">/${VOCAB.length}</span></div><div class="lbl">Vocab Mastered</div></div>
+      <div class="stat"><div class="n">${grammarCorrect}<span style="color:var(--ink-3);font-weight:500;font-size:14px;">/${grammarTotal}</span></div><div class="lbl">Grammar Q's</div></div>
+      <div class="stat"><div class="n">${m}<span style="color:var(--ink-3);font-weight:500;font-size:14px;">%</span></div><div class="lbl">Best Mock</div></div>
+    </div>
+
+    <div class="section-title">Practice <span class="sub">Tap to study</span></div>
+
+    ${menuBtn("vocab", "Vocabulary", `60 words across 4 lists`, v, VOCAB.length, "mastered")}
+    ${menuBtn("commas", "Comma Rules", `9 rules + ${COMMA_Q.length} practice questions`, c.correct, c.total, "correct")}
+    ${menuBtn("qi", "Quotes &amp; Italics", `9 rules + ${QI_Q.length} practice questions`, q.correct, q.total, "correct")}
+    ${menuBtn("apos", "Apostrophes", `9 rules + ${APOS_Q.length} practice questions`, a.correct, a.total, "correct")}
+
+    <div class="section-title">The Test <span class="sub">Best: ${m}%</span></div>
+    ${menuBtnSimple("mock", "Mock Final Exam", "30 mixed questions, timed feedback", m >= 85)}
+    ${menuBtnSimple("cheat", "Cheat Sheet", "All words + rules, one page", false)}
+
+    <div class="note">Progress saves automatically on this phone. ${VOCAB.length} vocab + ${COMMA_Q.length + QI_Q.length + APOS_Q.length} grammar questions in the bank.</div>
+  `;
+  view.querySelectorAll(".menu-btn").forEach(b => {
+    b.addEventListener("click", () => switchTab(b.dataset.go));
+  });
+}
+function menuBtn(go, title, meta, n, total, label) {
+  const pct = total ? Math.round(100 * n / total) : 0;
+  const done = n >= total;
+  return `
+    <div class="menu-btn ${done ? 'done' : ''}" data-go="${go}">
+      <div style="flex:1; min-width:0;">
+        <div class="mb-title">${title}</div>
+        <div class="mb-meta">${meta}</div>
+        <div class="prog-bar"><div class="prog-fill ${done ? 'green' : ''}" style="width:${pct}%"></div></div>
+      </div>
+      <div class="mb-prog">${n}/${total}<br><span style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;">${label}</span></div>
+    </div>
+  `;
+}
+function menuBtnSimple(go, title, meta, done) {
+  return `
+    <div class="menu-btn ${done ? 'done' : ''}" data-go="${go}">
+      <div style="flex:1; min-width:0;">
+        <div class="mb-title">${title}</div>
+        <div class="mb-meta">${meta}</div>
+      </div>
+      <div class="chevron">›</div>
+    </div>
+  `;
+}
+
+/* ---------- VOCAB ---------- */
+let vocabMode = "flash"; // flash | quiz
+let vocabFilter = "all"; // all | weak | 1 | 2 | 3 | 4
+let flashIdx = 0;
+let flashFlipped = false;
+let flashDir = "wd"; // wd = word -> def (default), df = def -> word
+
+function getVocabPool() {
+  let pool = VOCAB.slice();
+  if (vocabFilter === "weak") {
+    pool = pool.filter(v => !isVocabMastered(v.w));
+  } else if (vocabFilter !== "all") {
+    const ln = parseInt(vocabFilter, 10);
+    pool = pool.filter(v => v.list === ln);
+  }
+  return pool;
+}
+
+function renderVocab(view) {
+  view.innerHTML = `
+    <div class="chip-row">
+      <button class="chip ${vocabMode === 'flash' ? 'active' : ''}" data-mode="flash">Flashcards</button>
+      <button class="chip ${vocabMode === 'quiz' ? 'active' : ''}" data-mode="quiz">Quiz Me</button>
+    </div>
+    <div class="chip-row">
+      <button class="chip ${vocabFilter === 'all' ? 'active' : ''}" data-filter="all">All 60</button>
+      <button class="chip ${vocabFilter === 'weak' ? 'active' : ''}" data-filter="weak">Not Mastered</button>
+      <button class="chip ${vocabFilter === '1' ? 'active' : ''}" data-filter="1">List 1</button>
+      <button class="chip ${vocabFilter === '2' ? 'active' : ''}" data-filter="2">List 2</button>
+      <button class="chip ${vocabFilter === '3' ? 'active' : ''}" data-filter="3">List 3 (MLK)</button>
+      <button class="chip ${vocabFilter === '4' ? 'active' : ''}" data-filter="4">List 4</button>
+    </div>
+    <div id="vocab-body"></div>
+  `;
+  view.querySelectorAll(".chip[data-mode]").forEach(b =>
+    b.addEventListener("click", () => { vocabMode = b.dataset.mode; flashIdx = 0; flashFlipped = false; renderVocab(view); }));
+  view.querySelectorAll(".chip[data-filter]").forEach(b =>
+    b.addEventListener("click", () => { vocabFilter = b.dataset.filter; flashIdx = 0; flashFlipped = false; renderVocab(view); }));
+
+  const body = document.getElementById("vocab-body");
+  if (vocabMode === "flash") renderFlash(body);
+  else renderVocabQuiz(body);
+}
+
+function renderFlash(body) {
+  const pool = getVocabPool();
+  if (pool.length === 0) {
+    body.innerHTML = `<div class="card" style="text-align:center;"><div class="serif" style="font-size:20px;font-weight:700;">Nothing here.</div><div class="note">Pick a different filter above.</div></div>`;
+    return;
+  }
+  if (flashIdx >= pool.length) flashIdx = 0;
+  const card = pool[flashIdx];
+  const rec = state.vocab[card.w];
+  const ml = masteryLevel(rec);
+
+  const badgeClass = ml === "mastered" ? "mastered" : "";
+  const badgeText = ml === "mastered" ? "✓ Mastered" : ml === "learning" ? "Learning" : ml === "weak" ? "Needs work" : "New";
+
+  const front = `
+    <div class="badge ${badgeClass}">${badgeText}</div>
+    <div class="word serif">${card.w}</div>
+    <div class="pos">${card.pos} · List ${card.list}${card.forms ? " · " + card.forms : ""}</div>
+    <div class="defn" style="opacity:0.4;">Tap to flip</div>
+    <div class="tap-hint">Tap card to reveal</div>
+  `;
+  const back = `
+    <div class="badge ${badgeClass}">${badgeText}</div>
+    <div class="word serif" style="font-size:26px;">${card.w}</div>
+    <div class="pos">${card.pos}${card.forms ? " · " + card.forms : ""}</div>
+    <div class="defn">${card.def}</div>
+    <div class="example">"${card.ex}"</div>
+    <div class="tap-hint">Tap to flip back</div>
+  `;
+  body.innerHTML = `
+    <div class="flash-wrap">
+      <div class="flash ${flashFlipped ? 'flipped' : ''}" id="flashCard">
+        ${flashFlipped ? back : front}
+      </div>
+    </div>
+    <div class="flash-counter">${flashIdx + 1} / ${pool.length} · List ${card.list}</div>
+    <div class="flash-nav">
+      <button class="btn secondary" id="prevCard">← Prev</button>
+      <button class="btn green" id="knowIt">I knew it</button>
+      <button class="btn secondary" id="nextCard">Next →</button>
+    </div>
+    <div class="btn-row" style="margin-top:8px;">
+      <button class="btn ghost" id="shuffleCards">Shuffle</button>
+      <button class="btn ghost" id="missedCard">I missed this</button>
+    </div>
+    <div class="legend"><span><span class="dot g"></span>Mastered</span><span><span class="dot y"></span>Learning</span><span><span class="dot r"></span>New / weak</span></div>
+  `;
+  document.getElementById("flashCard").addEventListener("click", () => { flashFlipped = !flashFlipped; renderFlash(body); });
+  document.getElementById("prevCard").addEventListener("click", () => { flashIdx = (flashIdx - 1 + pool.length) % pool.length; flashFlipped = false; renderFlash(body); });
+  document.getElementById("nextCard").addEventListener("click", () => { flashIdx = (flashIdx + 1) % pool.length; flashFlipped = false; renderFlash(body); });
+  document.getElementById("knowIt").addEventListener("click", () => { recordVocab(card.w, true); flashIdx = (flashIdx + 1) % pool.length; flashFlipped = false; renderFlash(body); });
+  document.getElementById("missedCard").addEventListener("click", () => { recordVocab(card.w, false); flashIdx = (flashIdx + 1) % pool.length; flashFlipped = false; renderFlash(body); });
+  document.getElementById("shuffleCards").addEventListener("click", () => { for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; } flashIdx = 0; flashFlipped = false; body.dataset.shuffled = "1"; renderFlash(body); });
+}
+
+/* Vocab Quiz: pick a word, give 4 def options OR pick a def, give 4 word options */
+let vqState = null; // { question, options, answer, mode, settled }
+
+function buildVocabQuestion() {
+  const pool = getVocabPool();
+  if (pool.length === 0) return null;
+  // Weight selection toward not-mastered words
+  const weights = pool.map(v => isVocabMastered(v.w) ? 1 : 4);
+  const target = weightedPick(pool, weights);
+  const isDefMode = Math.random() < 0.55; // mostly word -> def, sometimes def -> word
+  let q, options, correctIdx;
+  // For variety also include "use in a sentence" mode (blank in example)
+  const useSentence = Math.random() < 0.25 && target.ex.toLowerCase().includes(target.w.toLowerCase().slice(0, 4));
+  if (useSentence) {
+    // Replace the word in the example with a blank
+    const re = new RegExp(target.w.replace(/y$/, "[a-z]*"), "i");
+    const blanked = target.ex.replace(re, "_____");
+    q = { type: "sentence", word: target.w, sentence: blanked, def: target.def };
+    options = pickDistractors(target, "word", 3).concat([target.w]);
+    options = shuffle(options);
+    correctIdx = options.indexOf(target.w);
+  } else if (isDefMode) {
+    q = { type: "wordToDef", word: target.w, pos: target.pos, list: target.list, forms: target.forms };
+    options = pickDistractors(target, "def", 3).concat([target.def]);
+    options = shuffle(options);
+    correctIdx = options.indexOf(target.def);
+  } else {
+    q = { type: "defToWord", def: target.def, pos: target.pos };
+    options = pickDistractors(target, "word", 3).concat([target.w]);
+    options = shuffle(options);
+    correctIdx = options.indexOf(target.w);
+  }
+  return { question: q, options, answer: correctIdx, target, settled: false };
+}
+function pickDistractors(target, kind, n) {
+  const pool = VOCAB.filter(v => v.w !== target.w);
+  // Prefer same part of speech for tougher distractors
+  const samePos = pool.filter(v => v.pos === target.pos);
+  const ordered = samePos.concat(pool.filter(v => v.pos !== target.pos));
+  shuffle(ordered);
+  return ordered.slice(0, n).map(v => kind === "def" ? v.def : v.w);
+}
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+function weightedPick(arr, weights) {
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < arr.length; i++) { r -= weights[i]; if (r <= 0) return arr[i]; }
+  return arr[arr.length - 1];
+}
+
+function renderVocabQuiz(body) {
+  if (!vqState) vqState = buildVocabQuestion();
+  if (!vqState) {
+    body.innerHTML = `<div class="card" style="text-align:center;"><div class="serif" style="font-size:20px;font-weight:700;">Nothing here.</div><div class="note">Pick a different filter above.</div></div>`;
+    return;
+  }
+  const q = vqState.question;
+  let promptHTML = "";
+  if (q.type === "wordToDef") {
+    promptHTML = `
+      <div class="meta">List ${q.list} · ${q.pos}${q.forms ? " · " + q.forms : ""}</div>
+      <div class="word serif">${q.word}</div>
+      <div style="font-size:12px;color:var(--ink-3);margin-top:8px;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;">Pick the definition</div>
+    `;
+  } else if (q.type === "defToWord") {
+    promptHTML = `
+      <div class="meta">${q.pos}</div>
+      <div class="sentence">${q.def}</div>
+      <div style="font-size:12px;color:var(--ink-3);margin-top:10px;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;">Pick the word</div>
+    `;
+  } else { // sentence
+    promptHTML = `
+      <div class="meta">Fill the blank</div>
+      <div class="sentence">"${q.sentence}"</div>
+      <div style="font-size:13px;color:var(--ink-3);margin-top:10px;font-style:italic;font-family:'Fraunces',serif;">Hint: ${q.def}</div>
+    `;
+  }
+
+  body.innerHTML = `
+    <div class="q-prompt">${promptHTML}</div>
+    <div class="q-options" id="qOpts">
+      ${vqState.options.map((opt, i) => `<button class="q-opt" data-i="${i}">${opt}</button>`).join("")}
+    </div>
+    <div id="qFeedback"></div>
+    <div class="spacer-12"></div>
+    <div class="btn-row">
+      <button class="btn secondary small" id="nextQ" style="flex:1; min-height:42px;">Skip →</button>
+    </div>
+  `;
+  document.getElementById("qOpts").querySelectorAll(".q-opt").forEach(b => {
+    b.addEventListener("click", () => answerVQ(parseInt(b.dataset.i, 10)));
+  });
+  document.getElementById("nextQ").addEventListener("click", () => { vqState = buildVocabQuestion(); renderVocabQuiz(body); });
+}
+
+function answerVQ(i) {
+  if (vqState.settled) return;
+  vqState.settled = true;
+  const right = i === vqState.answer;
+  recordVocab(vqState.target.w, right);
+  const opts = document.querySelectorAll("#qOpts .q-opt");
+  opts.forEach((el, idx) => {
+    el.classList.add("disabled");
+    if (idx === vqState.answer) el.classList.add("right");
+    if (idx === i && !right) el.classList.add("wrong");
+  });
+  const fb = document.getElementById("qFeedback");
+  if (right) {
+    fb.innerHTML = `<div class="feedback right"><strong>Right.</strong> ${vqState.target.w}: ${vqState.target.def}<br><em>"${vqState.target.ex}"</em></div>`;
+  } else {
+    fb.innerHTML = `<div class="feedback wrong"><strong>${vqState.target.w}</strong> means: ${vqState.target.def}<br><em>"${vqState.target.ex}"</em></div>`;
+  }
+  document.getElementById("nextQ").textContent = right ? "Next →" : "Got it →";
+  document.getElementById("nextQ").classList.remove("secondary");
+  document.getElementById("nextQ").classList.add(right ? "green" : "accent");
+}
+
+/* ---------- COMMAS ---------- */
+let commaMode = "learn"; // learn | practice
+let commaQState = null;
+let commaQOrder = [];
+let commaQPtr = 0;
+
+function renderCommas(view) {
+  view.innerHTML = `
+    <div class="chip-row">
+      <button class="chip ${commaMode === 'learn' ? 'active' : ''}" data-mode="learn">Learn the Rules</button>
+      <button class="chip ${commaMode === 'practice' ? 'active' : ''}" data-mode="practice">Practice (${COMMA_Q.length} Q)</button>
+    </div>
+    <div id="comma-body"></div>
+  `;
+  view.querySelectorAll(".chip[data-mode]").forEach(b =>
+    b.addEventListener("click", () => { commaMode = b.dataset.mode; commaQPtr = 0; commaQOrder = []; commaQState = null; renderCommas(view); }));
+  const body = document.getElementById("comma-body");
+  if (commaMode === "learn") renderCommaLearn(body);
+  else renderCommaPractice(body);
+}
+function renderCommaLearn(body) {
+  body.innerHTML = COMMA_RULES.map((r, i) => `
+    <div class="rule">
+      <div class="rule-num">Rule ${i + 1}</div>
+      <div class="rule-title">${r.title}</div>
+      <div class="rule-body">${r.body}</div>
+      <div class="ex">${r.good}</div>
+      ${r.bad ? `<div class="ex wrong">${r.bad}</div>` : ""}
+    </div>
+  `).join("") + `<div class="spacer-20"></div>
+    <button class="btn accent" onclick="document.querySelector('.chip[data-mode=practice]').click();">Try the practice questions →</button>`;
+}
+
+function renderCommaPractice(body) {
+  if (commaQOrder.length === 0) {
+    commaQOrder = COMMA_Q.map((_, i) => i);
+    shuffle(commaQOrder);
+    commaQPtr = 0;
+  }
+  if (commaQPtr >= commaQOrder.length) {
+    // Done — show score
+    const c = commaAccuracy();
+    body.innerHTML = `
+      <div class="card score-screen">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);font-weight:600;">Set complete</div>
+        <div class="score-pct">${c.correct}<span class="small">/${c.total}</span></div>
+        <div class="score-msg">${c.correct === c.total ? "All correct. Locked in." : c.correct >= c.total * 0.85 ? "Solid — just clean up a couple." : "Review the rules and run it again."}</div>
+        <div class="score-sub">Overall lifetime: ${c.correct} of ${c.total} unique questions answered correctly at least once.</div>
+        <div class="btn-row">
+          <button class="btn green" id="goAgain">Run them again</button>
+          <button class="btn secondary" id="backLearn">Review rules</button>
+        </div>
+      </div>
+    `;
+    document.getElementById("goAgain").addEventListener("click", () => { commaQOrder = []; commaQPtr = 0; commaQState = null; renderCommaPractice(body); });
+    document.getElementById("backLearn").addEventListener("click", () => { commaMode = "learn"; renderCommas(document.getElementById("view")); });
+    return;
+  }
+  const qIdx = commaQOrder[commaQPtr];
+  commaQState = { qIdx, settled: false };
+  const q = COMMA_Q[qIdx];
+  body.innerHTML = `
+    <div class="q-progress">
+      ${commaQOrder.map((_, i) => `<div class="dot ${i < commaQPtr ? 'done' : i === commaQPtr ? 'current' : ''}"></div>`).join("")}
+    </div>
+    <div class="q-prompt">
+      <div class="meta">Comma Rule · Q${commaQPtr + 1}/${commaQOrder.length}</div>
+      <div class="sentence">${q.q}</div>
+    </div>
+    <div class="q-options" id="cqOpts">
+      ${q.options.map((opt, i) => `<button class="q-opt" data-i="${i}"><span style="font-family:'Fraunces',serif;">${opt}</span></button>`).join("")}
+    </div>
+    <div id="cqFeedback"></div>
+    <div class="spacer-12"></div>
+    <div class="btn-row">
+      <button class="btn secondary small" id="cqNext" style="flex:1; min-height:42px;">Skip →</button>
+    </div>
+  `;
+  document.getElementById("cqOpts").querySelectorAll(".q-opt").forEach(b =>
+    b.addEventListener("click", () => answerCommaQ(parseInt(b.dataset.i, 10))));
+  document.getElementById("cqNext").addEventListener("click", () => { commaQPtr++; renderCommaPractice(body); });
+}
+function answerCommaQ(i) {
+  if (commaQState.settled) return;
+  commaQState.settled = true;
+  const q = COMMA_Q[commaQState.qIdx];
+  const right = i === q.answer;
+  recordCommaQ(commaQState.qIdx, right);
+  const opts = document.querySelectorAll("#cqOpts .q-opt");
+  opts.forEach((el, idx) => {
+    el.classList.add("disabled");
+    if (idx === q.answer) el.classList.add("right");
+    if (idx === i && !right) el.classList.add("wrong");
+  });
+  const fb = document.getElementById("cqFeedback");
+  fb.innerHTML = `<div class="feedback ${right ? 'right' : 'wrong'}"><strong>${right ? 'Right.' : 'Not quite.'}</strong> ${q.rule}</div>`;
+  const nxt = document.getElementById("cqNext");
+  nxt.textContent = "Next →";
+  nxt.classList.remove("secondary");
+  nxt.classList.add(right ? "green" : "accent");
+}
+
+/* ---------- Q/I ---------- */
+let qiMode = "learn";
+let qiQState = null;
+let qiQOrder = [];
+let qiQPtr = 0;
+
+function renderQI(view) {
+  view.innerHTML = `
+    <div class="chip-row">
+      <button class="chip ${qiMode === 'learn' ? 'active' : ''}" data-mode="learn">Learn the Rules</button>
+      <button class="chip ${qiMode === 'practice' ? 'active' : ''}" data-mode="practice">Practice (${QI_Q.length} Q)</button>
+    </div>
+    <div id="qi-body"></div>
+  `;
+  view.querySelectorAll(".chip[data-mode]").forEach(b =>
+    b.addEventListener("click", () => { qiMode = b.dataset.mode; qiQPtr = 0; qiQOrder = []; qiQState = null; renderQI(view); }));
+  const body = document.getElementById("qi-body");
+  if (qiMode === "learn") renderQILearn(body);
+  else renderQIPractice(body);
+}
+function renderQILearn(body) {
+  body.innerHTML = QI_RULES.map((r, i) => `
+    <div class="rule">
+      <div class="rule-num">Rule ${i + 1}</div>
+      <div class="rule-title">${r.title}</div>
+      <div class="rule-body">${r.body}</div>
+      <div class="ex">${r.good}</div>
+      ${r.bad ? `<div class="ex wrong">${r.bad}</div>` : ""}
+    </div>
+  `).join("") + `<div class="spacer-20"></div>
+    <button class="btn accent" onclick="document.querySelector('.chip[data-mode=practice]').click();">Try the practice questions →</button>`;
+}
+function renderQIPractice(body) {
+  if (qiQOrder.length === 0) {
+    qiQOrder = QI_Q.map((_, i) => i);
+    shuffle(qiQOrder);
+    qiQPtr = 0;
+  }
+  if (qiQPtr >= qiQOrder.length) {
+    const q = qiAccuracy();
+    body.innerHTML = `
+      <div class="card score-screen">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);font-weight:600;">Set complete</div>
+        <div class="score-pct">${q.correct}<span class="small">/${q.total}</span></div>
+        <div class="score-msg">${q.correct === q.total ? "Perfect. Mic drop." : q.correct >= q.total * 0.85 ? "Strong — just clean up a few." : "Review the rules and run it again."}</div>
+        <div class="score-sub">Overall lifetime: ${q.correct} of ${q.total} unique questions answered correctly at least once.</div>
+        <div class="btn-row">
+          <button class="btn green" id="goAgain">Run them again</button>
+          <button class="btn secondary" id="backLearn">Review rules</button>
+        </div>
+      </div>
+    `;
+    document.getElementById("goAgain").addEventListener("click", () => { qiQOrder = []; qiQPtr = 0; qiQState = null; renderQIPractice(body); });
+    document.getElementById("backLearn").addEventListener("click", () => { qiMode = "learn"; renderQI(document.getElementById("view")); });
+    return;
+  }
+  const qIdx = qiQOrder[qiQPtr];
+  qiQState = { qIdx, settled: false };
+  const q = QI_Q[qIdx];
+  body.innerHTML = `
+    <div class="q-progress">
+      ${qiQOrder.map((_, i) => `<div class="dot ${i < qiQPtr ? 'done' : i === qiQPtr ? 'current' : ''}"></div>`).join("")}
+    </div>
+    <div class="q-prompt">
+      <div class="meta">Quotes &amp; Italics · Q${qiQPtr + 1}/${qiQOrder.length}</div>
+      <div class="sentence">${q.q}</div>
+    </div>
+    <div class="q-options" id="qiOpts">
+      ${q.options.map((opt, i) => `<button class="q-opt" data-i="${i}"><span style="font-family:'Fraunces',serif;">${opt}</span></button>`).join("")}
+    </div>
+    <div id="qiFeedback"></div>
+    <div class="spacer-12"></div>
+    <div class="btn-row">
+      <button class="btn secondary small" id="qiNext" style="flex:1; min-height:42px;">Skip →</button>
+    </div>
+  `;
+  document.getElementById("qiOpts").querySelectorAll(".q-opt").forEach(b =>
+    b.addEventListener("click", () => answerQIQ(parseInt(b.dataset.i, 10))));
+  document.getElementById("qiNext").addEventListener("click", () => { qiQPtr++; renderQIPractice(body); });
+}
+function answerQIQ(i) {
+  if (qiQState.settled) return;
+  qiQState.settled = true;
+  const q = QI_Q[qiQState.qIdx];
+  const right = i === q.answer;
+  recordQI(qiQState.qIdx, right);
+  const opts = document.querySelectorAll("#qiOpts .q-opt");
+  opts.forEach((el, idx) => {
+    el.classList.add("disabled");
+    if (idx === q.answer) el.classList.add("right");
+    if (idx === i && !right) el.classList.add("wrong");
+  });
+  const fb = document.getElementById("qiFeedback");
+  fb.innerHTML = `<div class="feedback ${right ? 'right' : 'wrong'}"><strong>${right ? 'Right.' : 'Not quite.'}</strong> ${q.rule}</div>`;
+  const nxt = document.getElementById("qiNext");
+  nxt.textContent = "Next →";
+  nxt.classList.remove("secondary");
+  nxt.classList.add(right ? "green" : "accent");
+}
+
+/* ---------- APOSTROPHES ---------- */
+let aposMode = "learn";
+let aposQState = null;
+let aposQOrder = [];
+let aposQPtr = 0;
+
+function renderApos(view) {
+  view.innerHTML = `
+    <div class="chip-row">
+      <button class="chip ${aposMode === 'learn' ? 'active' : ''}" data-mode="learn">Learn the Rules</button>
+      <button class="chip ${aposMode === 'practice' ? 'active' : ''}" data-mode="practice">Practice (${APOS_Q.length} Q)</button>
+    </div>
+    <div id="apos-body"></div>
+  `;
+  view.querySelectorAll(".chip[data-mode]").forEach(b =>
+    b.addEventListener("click", () => { aposMode = b.dataset.mode; aposQPtr = 0; aposQOrder = []; aposQState = null; renderApos(view); }));
+  const body = document.getElementById("apos-body");
+  if (aposMode === "learn") renderAposLearn(body);
+  else renderAposPractice(body);
+}
+function renderAposLearn(body) {
+  body.innerHTML = APOS_RULES.map((r, i) => `
+    <div class="rule">
+      <div class="rule-num">Rule ${i + 1}</div>
+      <div class="rule-title">${r.title}</div>
+      <div class="rule-body">${r.body}</div>
+      <div class="ex">${r.good}</div>
+      ${r.bad ? `<div class="ex wrong">${r.bad}</div>` : ""}
+    </div>
+  `).join("") + `<div class="spacer-20"></div>
+    <button class="btn accent" onclick="document.querySelector('.chip[data-mode=practice]').click();">Try the practice questions →</button>`;
+}
+function renderAposPractice(body) {
+  if (aposQOrder.length === 0) {
+    aposQOrder = APOS_Q.map((_, i) => i);
+    shuffle(aposQOrder);
+    aposQPtr = 0;
+  }
+  if (aposQPtr >= aposQOrder.length) {
+    const a = aposAccuracy();
+    body.innerHTML = `
+      <div class="card score-screen">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);font-weight:600;">Set complete</div>
+        <div class="score-pct">${a.correct}<span class="small">/${a.total}</span></div>
+        <div class="score-msg">${a.correct === a.total ? "Perfect. Mic drop." : a.correct >= a.total * 0.85 ? "Strong — just clean up a few." : "Review the rules and run it again."}</div>
+        <div class="score-sub">Overall lifetime: ${a.correct} of ${a.total} unique questions answered correctly at least once.</div>
+        <div class="btn-row">
+          <button class="btn green" id="goAgain">Run them again</button>
+          <button class="btn secondary" id="backLearn">Review rules</button>
+        </div>
+      </div>
+    `;
+    document.getElementById("goAgain").addEventListener("click", () => { aposQOrder = []; aposQPtr = 0; aposQState = null; renderAposPractice(body); });
+    document.getElementById("backLearn").addEventListener("click", () => { aposMode = "learn"; renderApos(document.getElementById("view")); });
+    return;
+  }
+  const qIdx = aposQOrder[aposQPtr];
+  aposQState = { qIdx, settled: false };
+  const q = APOS_Q[qIdx];
+  body.innerHTML = `
+    <div class="q-progress">
+      ${aposQOrder.map((_, i) => `<div class="dot ${i < aposQPtr ? 'done' : i === aposQPtr ? 'current' : ''}"></div>`).join("")}
+    </div>
+    <div class="q-prompt">
+      <div class="meta">Apostrophes · Q${aposQPtr + 1}/${aposQOrder.length}</div>
+      <div class="sentence">${q.q}</div>
+    </div>
+    <div class="q-options" id="aposOpts">
+      ${q.options.map((opt, i) => `<button class="q-opt" data-i="${i}"><span style="font-family:'Fraunces',serif;">${opt}</span></button>`).join("")}
+    </div>
+    <div id="aposFeedback"></div>
+    <div class="spacer-12"></div>
+    <div class="btn-row">
+      <button class="btn secondary small" id="aposNext" style="flex:1; min-height:42px;">Skip →</button>
+    </div>
+  `;
+  document.getElementById("aposOpts").querySelectorAll(".q-opt").forEach(b =>
+    b.addEventListener("click", () => answerAposQ(parseInt(b.dataset.i, 10))));
+  document.getElementById("aposNext").addEventListener("click", () => { aposQPtr++; renderAposPractice(body); });
+}
+function answerAposQ(i) {
+  if (aposQState.settled) return;
+  aposQState.settled = true;
+  const q = APOS_Q[aposQState.qIdx];
+  const right = i === q.answer;
+  recordApos(aposQState.qIdx, right);
+  const opts = document.querySelectorAll("#aposOpts .q-opt");
+  opts.forEach((el, idx) => {
+    el.classList.add("disabled");
+    if (idx === q.answer) el.classList.add("right");
+    if (idx === i && !right) el.classList.add("wrong");
+  });
+  const fb = document.getElementById("aposFeedback");
+  fb.innerHTML = `<div class="feedback ${right ? 'right' : 'wrong'}"><strong>${right ? 'Right.' : 'Not quite.'}</strong> ${q.rule}</div>`;
+  const nxt = document.getElementById("aposNext");
+  nxt.textContent = "Next →";
+  nxt.classList.remove("secondary");
+  nxt.classList.add(right ? "green" : "accent");
+}
+
+/* ---------- MOCK TEST ---------- */
+let mockState = null; // { questions: [], idx, answers: [], settled }
+
+function buildMockTest() {
+  // 30 questions: 15 vocab + 5 commas + 5 q/i + 5 apostrophes
+  const vocabPool = shuffle(VOCAB.slice()).slice(0, 15);
+  const vocabQs = vocabPool.map(v => {
+    const mode = Math.random() < 0.5 ? "wordToDef" : "defToWord";
+    const wrongs = pickDistractors(v, mode === "wordToDef" ? "def" : "word", 3);
+    const correctVal = mode === "wordToDef" ? v.def : v.w;
+    const opts = shuffle(wrongs.concat([correctVal]));
+    return {
+      section: "vocab",
+      target: v.w,
+      type: mode,
+      prompt: mode === "wordToDef" ? `What does <strong>${v.w}</strong> mean?` : `Which word means: <em>${v.def}</em>`,
+      options: opts,
+      answer: opts.indexOf(correctVal),
+      explain: `${v.w}: ${v.def} <em>"${v.ex}"</em>`
+    };
+  });
+  const commaPool = shuffle(COMMA_Q.slice()).slice(0, 5);
+  const commaQs = commaPool.map(q => ({
+    section: "comma",
+    prompt: q.q,
+    options: q.options.slice(),
+    answer: q.answer,
+    explain: q.rule
+  }));
+  const qiPool = shuffle(QI_Q.slice()).slice(0, 5);
+  const qiQs = qiPool.map(q => ({
+    section: "qi",
+    prompt: q.q,
+    options: q.options.slice(),
+    answer: q.answer,
+    explain: q.rule
+  }));
+  const aposPool = shuffle(APOS_Q.slice()).slice(0, 5);
+  const aposQs = aposPool.map(q => ({
+    section: "apos",
+    prompt: q.q,
+    options: q.options.slice(),
+    answer: q.answer,
+    explain: q.rule
+  }));
+  const all = shuffle(vocabQs.concat(commaQs).concat(qiQs).concat(aposQs));
+  return all;
+}
+
+function renderMock(view) {
+  if (!mockState) {
+    view.innerHTML = `
+      <div class="card">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);font-weight:600;margin-bottom:6px;">The Big One</div>
+        <div class="serif" style="font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:8px;">Mock Final Exam</div>
+        <div style="color:var(--ink-2);line-height:1.5;margin-bottom:14px;">30 mixed questions: 15 vocab, 5 comma rules, 5 quotes &amp; italics, 5 apostrophes. You'll get a final score and a review of what you missed.</div>
+        <div style="font-size:13px;color:var(--ink-3);margin-bottom:14px;font-family:'Fraunces',serif;font-style:italic;">Best score so far: <strong style="color:var(--ink);font-style:normal;">${state.bestMock}%</strong>${state.mockHistory.length ? ` · ${state.mockHistory.length} attempt${state.mockHistory.length === 1 ? '' : 's'}` : ''}</div>
+        <button class="btn accent" id="startMock">Start mock test</button>
+      </div>
+      ${state.mockHistory.length ? `
+        <div class="section-title">Past Attempts <span class="sub">${state.mockHistory.length}</span></div>
+        ${state.mockHistory.slice().reverse().slice(0, 5).map(h => `
+          <div class="menu-btn" style="cursor:default;">
+            <div style="flex:1;min-width:0;">
+              <div class="mb-title">${h.score}% <span style="font-family:'Inter Tight',sans-serif;font-weight:500;font-size:13px;color:var(--ink-3);">(${Math.round(h.score * h.total / 100)}/${h.total})</span></div>
+              <div class="mb-meta">${h.date} · Vocab ${h.sections.vocab} · Commas ${h.sections.comma} · Q&I ${h.sections.qi}</div>
+            </div>
+          </div>
+        `).join("")}
+      ` : ""}
+    `;
+    document.getElementById("startMock").addEventListener("click", () => {
+      mockState = { questions: buildMockTest(), idx: 0, answers: [], settled: false };
+      renderMock(view);
+    });
+    return;
+  }
+  // In-progress test
+  if (mockState.idx >= mockState.questions.length) {
+    // Score it
+    let correct = 0;
+    const sectionCorrect = { vocab: 0, comma: 0, qi: 0 };
+    const sectionTotal = { vocab: 0, comma: 0, qi: 0 };
+    const misses = [];
+    mockState.questions.forEach((q, i) => {
+      sectionTotal[q.section]++;
+      const right = mockState.answers[i] === q.answer;
+      if (right) { correct++; sectionCorrect[q.section]++; }
+      else misses.push({ q, picked: mockState.answers[i] });
+    });
+    const total = mockState.questions.length;
+    const score = Math.round(100 * correct / total);
+    const today = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    const attempt = {
+      date: today,
+      score,
+      total,
+      sections: {
+        vocab: `${sectionCorrect.vocab}/${sectionTotal.vocab}`,
+        comma: `${sectionCorrect.comma}/${sectionTotal.comma}`,
+        qi: `${sectionCorrect.qi}/${sectionTotal.qi}`
+      }
+    };
+    state.mockHistory.push(attempt);
+    if (score > state.bestMock) state.bestMock = score;
+    saveState();
+
+    const passing = score >= 85;
+    view.innerHTML = `
+      <div class="card score-screen">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:${passing ? 'var(--green)' : 'var(--ink-3)'};font-weight:600;">${passing ? 'Test ready ✓' : 'Result'}</div>
+        <div class="score-pct">${score}<span class="small">%</span></div>
+        <div class="score-msg">${score === 100 ? "Perfect score." : passing ? "You're test ready." : score >= 70 ? "Solid base — patch the gaps below." : "Review and try again."}</div>
+        <div class="score-sub">${correct}/${total} · Vocab ${attempt.sections.vocab} · Commas ${attempt.sections.comma} · Q&amp;I ${attempt.sections.qi}</div>
+        <div class="btn-row">
+          <button class="btn green" id="newMock">Take another</button>
+          <button class="btn secondary" id="backHome">Home</button>
+        </div>
+      </div>
+      ${misses.length ? `
+        <div class="section-title">Missed (${misses.length}) <span class="sub">Review</span></div>
+        <div class="review-list">
+          ${misses.map(m => `
+            <div class="review-row">
+              <div class="rw-q">${m.q.prompt.replace(/<[^>]+>/g, "")}</div>
+              <div class="rw-a"><em>${m.q.explain}</em></div>
+            </div>
+          `).join("")}
+        </div>
+      ` : `<div class="note">Zero misses. Genuinely impressive.</div>`}
+    `;
+    document.getElementById("newMock").addEventListener("click", () => { mockState = null; renderMock(view); });
+    document.getElementById("backHome").addEventListener("click", () => { mockState = null; switchTab("home"); });
+    return;
+  }
+
+  // Render current question
+  const q = mockState.questions[mockState.idx];
+  view.innerHTML = `
+    <div class="q-progress">
+      ${mockState.questions.map((_, i) => {
+        const cls = i < mockState.idx ? (mockState.answers[i] === mockState.questions[i].answer ? "done" : "miss") : (i === mockState.idx ? "current" : "");
+        return `<div class="dot ${cls}"></div>`;
+      }).join("")}
+    </div>
+    <div class="q-prompt">
+      <div class="meta">Question ${mockState.idx + 1} / ${mockState.questions.length} · ${q.section === 'vocab' ? 'Vocab' : q.section === 'comma' ? 'Comma' : q.section === 'qi' ? 'Quotes & Italics' : 'Apostrophes'}</div>
+      <div class="sentence">${q.prompt}</div>
+    </div>
+    <div class="q-options" id="mockOpts">
+      ${q.options.map((opt, i) => `<button class="q-opt" data-i="${i}"><span style="font-family:${q.section === 'vocab' ? 'inherit' : "'Fraunces',serif"};">${opt}</span></button>`).join("")}
+    </div>
+    <div id="mockFeedback"></div>
+    <div class="spacer-12"></div>
+    <button class="btn secondary" id="mockNext" style="display:none;">Next →</button>
+  `;
+  document.getElementById("mockOpts").querySelectorAll(".q-opt").forEach(b =>
+    b.addEventListener("click", () => answerMock(parseInt(b.dataset.i, 10))));
+  document.getElementById("mockNext").addEventListener("click", () => { mockState.idx++; mockState.settled = false; renderMock(view); });
+}
+function answerMock(i) {
+  if (mockState.settled) return;
+  mockState.settled = true;
+  mockState.answers[mockState.idx] = i;
+  const q = mockState.questions[mockState.idx];
+  const right = i === q.answer;
+  if (q.section === "vocab") recordVocab(q.target, right);
+  if (q.section === "comma") {/* don't pollute targeted question records */}
+  if (q.section === "qi") {/* same */}
+  const opts = document.querySelectorAll("#mockOpts .q-opt");
+  opts.forEach((el, idx) => {
+    el.classList.add("disabled");
+    if (idx === q.answer) el.classList.add("right");
+    if (idx === i && !right) el.classList.add("wrong");
+  });
+  const fb = document.getElementById("mockFeedback");
+  fb.innerHTML = `<div class="feedback ${right ? 'right' : 'wrong'}"><strong>${right ? 'Right.' : 'Nope.'}</strong> ${q.explain}</div>`;
+  const nxt = document.getElementById("mockNext");
+  nxt.style.display = "flex";
+  nxt.classList.remove("secondary");
+  nxt.classList.add(right ? "green" : "accent");
+  nxt.textContent = mockState.idx + 1 >= mockState.questions.length ? "See results →" : "Next →";
+}
+
+/* ---------- CHEAT SHEET ---------- */
+function renderCheat(view) {
+  const byList = [1, 2, 3, 4].map(l => ({
+    n: l,
+    words: VOCAB.filter(v => v.list === l)
+  }));
+  view.innerHTML = `
+    <div class="note">Everything in one place. Scan before the test or scroll the night before.</div>
+
+    <div class="section-title">Vocab <span class="sub">${VOCAB.length} words</span></div>
+    ${byList.map(b => `
+      <div style="font-family:'Fraunces',serif;font-weight:700;font-size:15px;letter-spacing:-0.01em;margin:14px 0 6px 0;color:var(--ink-2);">List ${b.n}${b.n === 3 ? ' · Letter from a Birmingham Jail' : ''}</div>
+      <div class="list-table">
+        ${b.words.map(v => `
+          <div class="list-row">
+            <div class="w">${v.w}${v.forms ? `<br><em style="font-family:'Fraunces',serif;font-weight:400;font-size:12px;color:var(--ink-3);font-style:italic;">${v.forms}</em>` : ''}</div>
+            <div class="d">${v.def} <em>"${v.ex}"</em></div>
+          </div>
+        `).join("")}
+      </div>
+    `).join("")}
+
+    <div class="section-title">Comma Rules <span class="sub">9 rules</span></div>
+    ${COMMA_RULES.map((r, i) => `
+      <div class="rule" style="border-left-color:var(--accent);">
+        <div class="rule-num">Rule ${i + 1}</div>
+        <div class="rule-title">${r.title}</div>
+        <div class="rule-body">${r.body}</div>
+        <div class="ex">${r.good}</div>
+      </div>
+    `).join("")}
+
+    <div class="section-title">Quotes &amp; Italics <span class="sub">9 rules</span></div>
+    ${QI_RULES.map((r, i) => `
+      <div class="rule" style="border-left-color:var(--gold);">
+        <div class="rule-num">Rule ${i + 1}</div>
+        <div class="rule-title">${r.title}</div>
+        <div class="rule-body">${r.body}</div>
+        <div class="ex">${r.good}</div>
+      </div>
+    `).join("")}
+
+    <div class="section-title">Apostrophes <span class="sub">9 rules</span></div>
+    ${APOS_RULES.map((r, i) => `
+      <div class="rule" style="border-left-color:var(--green);">
+        <div class="rule-num">Rule ${i + 1}</div>
+        <div class="rule-title">${r.title}</div>
+        <div class="rule-body">${r.body}</div>
+        <div class="ex">${r.good}</div>
+      </div>
+    `).join("")}
+
+    <div class="card dark" style="margin-top:18px;">
+      <div style="font-family:'Fraunces',serif;font-weight:700;font-size:18px;letter-spacing:-0.01em;margin-bottom:6px;">The 30-Second Cheat</div>
+      <div style="line-height:1.6;font-size:14.5px;">
+        <strong style="color:var(--gold);">Commas:</strong> series · before FANBOYS in compound sentences · after intro phrases · around nonessential info · direct address · dialogue tags · coordinate adjectives · dates &amp; places · transitions.<br><br>
+        <strong style="color:var(--gold);">Italics:</strong> books, movies, plays, albums, magazines, newspapers, TV series, ships, foreign words, words as words, emphasis (rare).<br><br>
+        <strong style="color:var(--gold);">Quotes:</strong> short stories, poems, songs, articles, chapters, episodes, direct quotations. Commas and periods always INSIDE the closing quote in American English.<br><br>
+        <strong style="color:var(--gold);">Apostrophes:</strong> contractions (don't, it's, you're) · singular possessive +'s (James's car) · plural possessive ending in s just +' (the dogs' bones) · irregular plurals +'s (children's, men's) · IT'S = it is, ITS = belongs to it · NO apostrophe for plain plurals (the Penns, not the Penn's).
+      </div>
+    </div>
+  `;
+}
+
+/* ============ INIT ============ */
+document.getElementById("resetLink").addEventListener("click", () => {
+  if (confirm("Reset ALL progress? (vocab mastery, mock test history, everything)")) {
+    state = JSON.parse(JSON.stringify(defaultState));
+    saveState();
+    switchTab("home");
+  }
+});
+
+renderTabs();
+render();
+</script>
+</body>
+</html>
