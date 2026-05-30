@@ -1,6 +1,6 @@
 # AAVC 2026 Camp Assignments
 
-_Generated 2026-05-29 from FileMaker (`All American 2026`)._
+_Generated 2026-05-30 from FileMaker (`All American 2026`)._
 
 **Coaching slots open:** 33 of 219 across 119 camps (186 filled · 102 active camps total).
 
@@ -29,7 +29,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Desert Edge
 
 **Location:** Desert Edge High School — 15778 W Yuma Rd, Goodyear, AZ, 85338
-**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Southwest region
 **School:** Desert Edge (Coach: Tiffany Liddile)
@@ -58,7 +58,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Coal Ridge
 
 **Location:** Coal Ridge High School — 35947 US-6, New Castle, CO 81647
-**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Southwest region
 **School:** Coal Ridge (Coach: Julio Aguirre)
@@ -85,7 +85,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Kent Denver
 
 **Location:** Kent Denver School — 4000 E Quincy Ave, Englewood, CO 80113
-**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Southwest region
 **School:** Kent Denver School (Coach: Emily Danitz)
@@ -104,7 +104,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 
 #### Hawthorne — _Cancelled_
 
-**Location:** Hawthorne Middle HS — 21403 SE 69th Ave, Hawthorne, FL 32640
+**Location:** Hawthorne Middle HS — 21403 SE 69th Ave , Hawthorne, FL 32640
 **Dates:** Jun 1–3, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · FL/GA region
@@ -123,7 +123,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Old Plank Christian Academy — _Cancelled_
 
 **Location:** Old Plank Christian Academy — 8964 Old Plank Rd, Jacksonville, FL 32220
-**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · FL/GA region
 **School:** Old Plank Christian Academy (Coach: Tonya Keil)
@@ -194,15 +194,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Woodward Academy (Coach: Tim Grooms)
 **Coaching Slots:** 1 of 2 filled · 1 open — Caylen Alexander (Yes)
 
-#### Chestatee
-
-**Location:** Chestatee High School — 3005 Sardis Rd, Gainesville, GA, 30506
-**Dates:** Jul 16–18, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jul 16–17, 2026, 3:30-5:30)
-**Type:** Skill camp · FL/GA region
-**School:** Chestatee (Coach: Bill Bush)
-**Coaching Slots:** 1 of 2 filled · 1 open — Caylen Alexander (Yes; 5/2 was in spam)
-
 #### South Forsyth
 
 **Location:** South Forsyth High School — 585 Peachtree Pkwy, Cumming, GA, 30041
@@ -212,32 +203,14 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** South Forsyth (Coach: Victoria Aaron)
 **Coaching Slots:** 2 of 2 filled · 0 open — Lauren Clark (Yes), Deja Robinson (Yes)
 
-#### Carrollton
+#### Chestatee
 
-**Location:** Carrollton High School — 201 Trojan Drive, Carrollton, GA 30117
-**Dates:** Jul 20–22, 2026 — Sessions: M/Tues 9-11 +12-2 | Wed 9-11a
-**MS Session:** No
+**Location:** Chestatee High School — 3005 Sardis Rd, Gainesville, GA, 30506
+**Dates:** Jul 16–18, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jul 16–17, 2026, 3:30-5:30)
 **Type:** Skill camp · FL/GA region
-**School:** Carrollton (Coach: Morganne Harper)
-**Coaching Slots:** 1 of 2 filled · 1 open — Caylen Alexander (Yes; Kayla?)
-
-#### Lanier
-
-**Location:** Lanier HS Main Gym — 918 Buford Hwy NE, Sugar Hill, GA, 30518
-**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** No
-**Type:** Skill camp · FL/GA region
-**School:** Lanier (Coach: Ted Deppe)
-**Coaching Slots:** 1 of 1 filled · 0 open — Lauren Ford (Accepted; 5/7 other teams may join.)
-
-#### McIntosh
-
-**Location:** McIntosh Gym — 201 Walt Banks Rd, Peachtree City, GA 30269
-**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** No
-**Type:** Skill camp · FL/GA region
-**School:** McIntosh High School (Coach: Kurt Lewis)
-**Coaching Slots:** 2 of 2 filled · 0 open — Deja Robinson (Yes; 4/1 kids will sign up in may.  he'll ask about dep), Morgan McClure (Accepted)
+**School:** Chestatee (Coach: Bill Bush)
+**Coaching Slots:** 1 of 2 filled · 1 open — Caylen Alexander (Yes; 5/2 was in spam)
 
 #### Savannah Arts
 
@@ -248,6 +221,33 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Savannah Arts (Coach: Lauren Lord)
 **Coaching Slots:** 2 of 2 filled · 0 open — Tessa Grubbs (Yes), Claudia Dillon (Yes)
 
+#### McIntosh
+
+**Location:** McIntosh Gym — 201 Walt Banks Rd, Peachtree City, GA 30269
+**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** No
+**Type:** Skill camp · FL/GA region
+**School:** McIntosh High School (Coach: Kurt Lewis)
+**Coaching Slots:** 2 of 2 filled · 0 open — Deja Robinson (Yes; 4/1 kids will sign up in may.  he'll ask about dep), Morgan McClure (Accepted)
+
+#### Lanier
+
+**Location:** Lanier HS Main Gym — 918 Buford Hwy NE, Sugar Hill, GA, 30518
+**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** No
+**Type:** Skill camp · FL/GA region
+**School:** Lanier (Coach: Ted Deppe)
+**Coaching Slots:** 1 of 1 filled · 0 open — Lauren Ford (Accepted; 5/7 other teams may join.)
+
+#### Carrollton
+
+**Location:** Carrollton High School — 201 Trojan Drive, Carrollton, GA 30117
+**Dates:** Jul 20–22, 2026 — Sessions: M/Tues 9-11 +12-2 | Wed 9-11a
+**MS Session:** No
+**Type:** Skill camp · FL/GA region
+**School:** Carrollton (Coach: Morganne Harper)
+**Coaching Slots:** 1 of 2 filled · 1 open — Caylen Alexander (Yes; Kayla?)
+
 #### Pace Academy
 
 **Location:** Pace Academy — 966 W. Paces Ferry Road NW, Atlanta, GA 30327
@@ -257,15 +257,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Pace Academy (Coach: Catherine Monroe)
 **Coaching Slots:** 2 of 2 filled · 0 open — Deja Robinson (Yes), Morgan McClure (Accepted)
 
-#### East Jackson
-
-**Location:** East Jackson HS — 1435 Hoods Mill Rd, Commerce, GA 30529
-**Dates:** Jul 27–29, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jul 27–28, 2026, 3:30-5:30)
-**Type:** Skill camp · FL/GA region
-**School:** East Jackson HS (Coach: Mary White)
-**Coaching Slots:** 2 of 2 filled · 0 open — Deja Robinson (Yes; 4/1 kids will sign up in may), Nicole Drewnick (Yes)
-
 #### Habersham Central
 
 **Location:** Habersham Central — 2059 HWY 197 South, Mt. Airy, Georgia 30563
@@ -274,6 +265,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Type:** Skill camp · FL/GA region
 **School:** Habersham Central (Coach: Lindsay Herrin)
 **Coaching Slots:** 2 of 2 filled · 0 open — Caylen Alexander (Yes), Morgan McClure (Accepted)
+
+#### East Jackson
+
+**Location:** East Jackson HS — 1435 Hoods Mill Rd, Commerce, GA 30529
+**Dates:** Jul 27–29, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jul 27–28, 2026, 3:30-5:30)
+**Type:** Skill camp · FL/GA region
+**School:** East Jackson HS (Coach: Mary White)
+**Coaching Slots:** 2 of 2 filled · 0 open — Deja Robinson (Yes; 4/1 kids will sign up in may), Nicole Drewnick (Yes)
 
 ### Idaho (ID)
 
@@ -318,7 +318,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Winnebago
 
 **Location:** Winnebago High School — 200 E McNair Rd, Winnebago, Illinois, 61088
-**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Midwest region
 **School:** Winnebago (Coach: Kylie Gray)
@@ -391,15 +391,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Cedar Springs (Coach: Ashley Lowing)
 **Coaching Slots:** 2 of 2 filled · 0 open — Natalie Mitchem (Accepted; 5/19 told coach even 10-12 HS will keep it going for us.), Megan Vander Meer (Accepted)
 
-#### Greenhills
-
-**Location:** Greenhills School — 850 Greenhills Drive, Ann Arbor, MI 48105
-**Dates:** Jun 8–10, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jun 8–9, 2026, 3:30-5:30)
-**Type:** Skill camp · Midwest region
-**School:** Greenhills (Coach: Tiffany Willard)
-**Coaching Slots:** 2 of 2 filled · 0 open — Maddie Stayer (Accepted), Ammaarah Williams (Accepted)
-
 #### Hastings
 
 **Location:** Hastings High School — 520 W South St, Hastings, MI 49058
@@ -409,14 +400,14 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Hastings (Coach: Alexis Hanchett)
 **Coaching Slots:** 2 of 2 filled · 0 open — Jayde Harris (Accepted; low numbers for HS, but allowing), Fran McBride (Accepted)
 
-#### Bishop Foley
+#### Greenhills
 
-**Location:** Bishop Foley Catholic HS — 32000 N Campbell Rd, Madison Heights, MI 48071
-**Dates:** Jun 15–17, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** No
+**Location:** Greenhills School — 850 Greenhills Drive, Ann Arbor, MI 48105
+**Dates:** Jun 8–10, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jun 8–9, 2026, 3:30-5:30)
 **Type:** Skill camp · Midwest region
-**School:** Bishop Foley Catholic HS (Coach: Jess Fett)
-**Coaching Slots:** 2 of 2 filled · 0 open — Jayde Harris (Accepted), Fran McBride (Accepted)
+**School:** Greenhills (Coach: Tiffany Willard)
+**Coaching Slots:** 2 of 2 filled · 0 open — Maddie Stayer (Accepted), Ammaarah Williams (Accepted)
 
 #### Boyne City — _Cancelled_
 
@@ -426,6 +417,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Type:** Skill camp · Midwest region
 **School:** Boyne City (Coach: Megan Neidhamer)
 **Coaching Slots:** _Cancelled_
+
+#### Bishop Foley
+
+**Location:** Bishop Foley Catholic HS — 32000 N Campbell Rd, Madison Heights, MI 48071
+**Dates:** Jun 15–17, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** No
+**Type:** Skill camp · Midwest region
+**School:** Bishop Foley Catholic HS (Coach: Jess Fett)
+**Coaching Slots:** 2 of 2 filled · 0 open — Jayde Harris (Accepted), Fran McBride (Accepted)
 
 #### Marquette — _Cancelled_
 
@@ -471,15 +471,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** West Bloomfield (Coach: Michael Armstrong)
 **Coaching Slots:** 2 of 2 filled · 0 open — Maddie Stayer (Accepted; 4/6 he'll start getting regis soon), Fran McBride (Accepted)
 
-#### Durand
-
-**Location:** Durand High School — 9575 E Monroe Rd, Durand, MI 48429
-**Dates:** Jul 16–18, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** No
-**Type:** Skill camp · Midwest region
-**School:** Durand (Coach: Heather Taylor)
-**Coaching Slots:** 2 of 2 filled · 0 open — Ammaarah Williams (Accepted), Shelby Pullins (Yes)
-
 #### Skyline
 
 **Location:** Skyline High School — 2552 N Maple Rd., Ann Arbor, MI 48103
@@ -489,14 +480,14 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Skyline (Coach: Chris Christian)
 **Coaching Slots:** 2 of 2 filled · 0 open — Maddie Stayer (Accepted; Jacyn B), Jacyn Bamis (Yes; Erin Brothers)
 
-#### Columbia Central
+#### Durand
 
-**Location:** Columbia Central High School — 11775 Hewitt Rd., Brooklyn, Michigan 49230
-**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jul 20–21, 2026, 3:30-5:30)
+**Location:** Durand High School — 9575 E Monroe Rd, Durand, MI 48429
+**Dates:** Jul 16–18, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** No
 **Type:** Skill camp · Midwest region
-**School:** Columbia Central (Coach: Jenny Tompkins)
-**Coaching Slots:** 2 of 2 filled · 0 open — Natalie Mitchem (Yes), Ammaarah Williams (Accepted)
+**School:** Durand (Coach: Heather Taylor)
+**Coaching Slots:** 2 of 2 filled · 0 open — Ammaarah Williams (Accepted), Shelby Pullins (Accepted)
 
 #### Loy Norrix
 
@@ -516,6 +507,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Type:** Skill camp · Midwest region
 **School:** Seaholm (Coach: Derek Williams)
 **Coaching Slots:** 2 of 2 filled · 0 open — Jacyn Bamis (Yes; Jess Robinson), Jess Robinson (Accepted; Jacyn B)
+
+#### Columbia Central
+
+**Location:** Columbia Central High School — 11775 Hewitt Rd., Brooklyn, Michigan 49230
+**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jul 20–21, 2026, 3:30-5:30)
+**Type:** Skill camp · Midwest region
+**School:** Columbia Central (Coach: Jenny Tompkins)
+**Coaching Slots:** 2 of 2 filled · 0 open — Natalie Mitchem (Yes), Ammaarah Williams (Accepted)
 
 #### Clintondale — _Cancelled_
 
@@ -580,11 +580,11 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Queensbury
 
 **Location:** Queensbury High School — 409 Aviation Road, Queensbury, NY 12804
-**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Queensbury (Coach: Kristen Murphy)
-**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Yes), Cara McKenzie (Accepted; needs rental)
+**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Accepted), Cara McKenzie (Accepted; needs rental)
 
 #### Wilson Central — _Cancelled_
 
@@ -595,15 +595,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Wilson Central (Coach: Maegan Eick)
 **Coaching Slots:** _Cancelled_
 
-#### Jamestown
-
-**Location:** Jamestown High School — 350 E 2nd St, Jamestown, NY 14701
-**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jul 20–21, 2026, 3:30-5:30)
-**Type:** Skill camp · NY/PA region
-**School:** Jamestown (Coach: Ken Ricker)
-**Coaching Slots:** 0 of 2 filled · 2 open
-
 #### Mechanicville
 
 **Location:** Mechanicville City Schools — 25 Kniskern Ave, Mechanicville, NY 12118
@@ -613,6 +604,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Mechanicville City Schools (Coach: Lynn  Dorr)
 **Coaching Slots:** 2 of 2 filled · 0 open — Annika Hester (Accepted), Cara McKenzie (Accepted; needs rental)
 
+#### Jamestown
+
+**Location:** Jamestown High School — 350 E 2nd St, Jamestown, NY 14701
+**Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jul 20–21, 2026, 3:30-5:30)
+**Type:** Skill camp · NY/PA region
+**School:** Jamestown (Coach: Ken Ricker)
+**Coaching Slots:** 0 of 2 filled · 2 open
+
 #### La Salle
 
 **Location:** La Salle Institute — 44 E 2nd St., New York, NY 10003
@@ -620,7 +620,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** Yes (Jul 23–24, 2026, 3:30-5:30)
 **Type:** Skill camp · NY/PA region
 **School:** La Salle (Coach: Sky Arnold)
-**Coaching Slots:** 2 of 2 filled · 0 open — Annika Hester (Accepted; wants to back out), Arianna Beckham (Yes; Hattie Monson?)
+**Coaching Slots:** 2 of 2 filled · 0 open — Annika Hester (Accepted; wants to back out), Arianna Beckham (Accepted; Hattie Monson?)
 
 #### Birdlebough
 
@@ -669,15 +669,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** North Olmsted (Coach: Jason Krucek)
 **Coaching Slots:** _Cancelled_
 
-#### Batavia
-
-**Location:** Batavia High School — 1 Bulldog Place, Batavia, OH 45103
-**Dates:** Jun 22–24, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** Yes (Jun 22–23, 2026, 3:30-5:30)
-**Type:** Skill camp · Midwest region
-**School:** Batavia (Coach: Ashleigh Smith)
-**Coaching Slots:** 2 of 2 filled · 0 open — Anna Shoemake (Yes), Kendall White (Accepted; Kamryn Hunt might be available?)
-
 #### Buckeye Central
 
 **Location:** Buckeye Central Local Schools — 938 S. Kibler St, New Washington, OH 44890
@@ -687,23 +678,23 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **School:** Buckeye Central (Coach: Paige Caudill)
 **Coaching Slots:** 2 of 2 filled · 0 open — Karlie Kucharczyk (Accepted), Maddie Fogg (Accepted)
 
+#### Batavia
+
+**Location:** Batavia High School — 1 Bulldog Place, Batavia, OH 45103
+**Dates:** Jun 22–24, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** Yes (Jun 22–23, 2026, 3:30-5:30)
+**Type:** Skill camp · Midwest region
+**School:** Batavia (Coach: Ashleigh Smith)
+**Coaching Slots:** 2 of 2 filled · 0 open — Anna Shoemake (Yes), Kendall White (Accepted; Kamryn Hunt might be available?)
+
 #### Edgerton
 
 **Location:** Edgerton HS Gym — 111 River Street, Edgerton, OH 43517
-**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Midwest region
 **School:** Edgerton (Coach: Krista  Pahl)
 **Coaching Slots:** 2 of 2 filled · 0 open — Anna Shoemake (Yes), Kendall White (Accepted)
-
-#### Campbell Memorial
-
-**Location:** CLWCC — 436 Struthers Coitsville Road, Lowellville, OH 44436
-**Dates:** Jul 6–8, 2026 — Sessions: 9-11:30 & 12:30-3
-**MS Session:** No
-**Type:** Team camp · Midwest region
-**Schools:** Slippery Rock Team Camp (Coach: Brandon Ferrier), Campbell Memorial (Coach: Tyler Allen), Struthers (Coach: Delaney Shuler), Sharpsville (Coach: Rosemary Ferguson)
-**Coaching Slots:** 4 of 4 filled · 0 open — Kendall White (Accepted), Anna Shoemake (Yes; really want a lib/defense), Maddie Fogg (Accepted), Allison Holland (Yes)
 
 #### Oak Hill
 
@@ -713,6 +704,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Type:** Skill camp · Midwest region
 **School:** Oak Hill High School (Coach: Zack Kiser)
 **Coaching Slots:** 2 of 2 filled · 0 open — Maddie Stayer (Accepted), Erin Brothers (Accepted)
+
+#### Campbell Memorial
+
+**Location:** CLWCC — 436 Struthers Coitsville Road, Lowellville, OH 44436
+**Dates:** Jul 6–8, 2026 — Sessions: 9-11:30 & 12:30-3
+**MS Session:** No
+**Type:** Team camp · Midwest region
+**Schools:** Slippery Rock Team Camp (Coach: Brandon Ferrier), Campbell Memorial (Coach: Tyler Allen), Struthers (Coach: Delaney Shuler), Sharpsville (Coach: Rosemary Ferguson)
+**Coaching Slots:** 4 of 4 filled · 0 open — Kendall White (Accepted), Anna Shoemake (Yes; really want a lib/defense), Maddie Fogg (Accepted), Allison Holland (Yes)
 
 #### Anderson
 
@@ -753,7 +753,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Kenton
 
 **Location:** Kenton High School — 200 Harding Ave, Kenton, OH 43326
-**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Midwest region
 **School:** Kenton (Coach: Juli Dearing)
@@ -797,15 +797,6 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Schools:** Cascade Christian (Coach: Rob Kleker), Crater (Coach: Tiffany Booth), La Pine (Coach: Kassy Bowen), North Valley (Coach: Shannon Huff)
 **Coaching Slots:** 3 of 7 filled · 4 open — Katy Ryan (Yes), Lauren McCabe (Yes), Sh'Diamond Holly (Yes)
 
-#### Brookings
-
-**Location:** Brookings Harbor HS — 625 Pioneer Road, Brookings, OR 97415
-**Dates:** Aug 13–15, 2026 — Sessions: Thurs/Fri 9-12 + 1-4, Sat 9-12
-**MS Session:** No
-**Type:** Skill camp · Northwest region
-**School:** Brookings (Coach: Vanessa Nidiffer)
-**Coaching Slots:** 1 of 2 filled · 1 open — Sh'Diamond Holly (Yes)
-
 #### Sutherlin
 
 **Location:** Sutherlin High School — 500 E Fourth Ave, Sutherlin, OR 97479
@@ -814,6 +805,15 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **Type:** Skill camp · Northwest region
 **School:** Sutherlin (Coach: Kimberly Martineau)
 **Coaching Slots:** 2 of 2 filled · 0 open — Katy Ryan (Yes; Katy Ryan), Lauren McCabe (Yes)
+
+#### Brookings
+
+**Location:** Brookings Harbor HS — 625 Pioneer Road, Brookings, OR 97415
+**Dates:** Aug 13–15, 2026 — Sessions: Thurs/Fri 9-12 + 1-4, Sat 9-12
+**MS Session:** No
+**Type:** Skill camp · Northwest region
+**School:** Brookings (Coach: Vanessa Nidiffer)
+**Coaching Slots:** 1 of 2 filled · 1 open — Sh'Diamond Holly (Yes)
 
 ### Pennsylvania (PA)
 
@@ -824,7 +824,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Greensburg Salem (Coach: Rachel Brannigan)
-**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Yes; good on her end 4/1), Kayla Dinkins (Yes; Maggie or Kayla)
+**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Accepted; good on her end 4/1), Kayla Dinkins (Yes; Maggie or Kayla)
 
 #### Homer-Center
 
@@ -833,7 +833,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Homer-Center (Coach: Breanna Zenisek)
-**Coaching Slots:** 2 of 2 filled · 0 open — Kendall White (Accepted), Arianna Beckham (Yes)
+**Coaching Slots:** 2 of 2 filled · 0 open — Kendall White (Accepted), Arianna Beckham (Accepted)
 
 #### McConnellsburg
 
@@ -842,7 +842,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** McConnellsburg (Coach: Erin Pistner)
-**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Yes), Kayla Dinkins (Yes)
+**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Accepted), Kayla Dinkins (Yes)
 
 #### Cedar Cliff
 
@@ -851,7 +851,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Cedar Cliff (Coach: Ashlan Houser)
-**Coaching Slots:** 1 of 2 filled · 1 open — Arianna Beckham (Yes; deposit check mailed 5/5 per Ashlan)
+**Coaching Slots:** 1 of 2 filled · 1 open — Arianna Beckham (Accepted; deposit check mailed 5/5 per Ashlan)
 
 #### Slippery Rock
 
@@ -860,7 +860,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** Yes (Jul 27–28, 2026, 3:30-5:30)
 **Type:** Skill camp · NY/PA region
 **School:** Slippery Rock (Coach: Brandon Ferrier)
-**Coaching Slots:** 2 of 2 filled · 0 open — Kendall White (Accepted; 4/1 sending deposit), Arianna Beckham (Yes)
+**Coaching Slots:** 2 of 2 filled · 0 open — Kendall White (Accepted; 4/1 sending deposit), Arianna Beckham (Accepted)
 
 #### William Tennent
 
@@ -887,7 +887,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Pottsgrove HS (Coach: Jaime Reinhart)
-**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Yes; won't fill roster until Aug.), Sam Juran (Yes)
+**Coaching Slots:** 2 of 2 filled · 0 open — Arianna Beckham (Accepted; won't fill roster until Aug.), Sam Juran (Yes)
 
 ### Tennessee (TN)
 
@@ -898,7 +898,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 **MS Session:** No
 **Type:** Skill camp · KY/TN region
 **School:** Community (Coach: Tiffany Klages)
-**Coaching Slots:** 2 of 2 filled · 0 open — Jacklyn Simms (Yes), Melody Paige (Accepted; Atlanta! Caylen or Nicole)
+**Coaching Slots:** 2 of 2 filled · 0 open — Jacklyn Simms (Accepted), Melody Paige (Accepted; Atlanta! Caylen or Nicole)
 
 #### Riverside
 
@@ -1014,7 +1014,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 
 #### Quincy
 
-**Location:** Quincy HS Main & Aux Gyms  — 403 Jackrabbit St, Quincy, WA 98848
+**Location:** Quincy HS Main & Aux Gyms — 403 Jackrabbit St, Quincy, WA 98848
 **Dates:** Jul 13–15, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Northwest region
@@ -1032,7 +1032,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 
 #### Quincy
 
-**Location:** Quincy HS Main & Aux Gyms  — 403 Jackrabbit St, Quincy, WA 98848
+**Location:** Quincy HS Main & Aux Gyms — 403 Jackrabbit St, Quincy, WA 98848
 **Dates:** Jul 20–22, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Northwest region
@@ -1089,7 +1089,7 @@ _Generated 2026-05-29 from FileMaker (`All American 2026`)._
 #### Elkhorn
 
 **Location:** Elkhorn Area High School — 482 E Geneva St., Elkhorn, WI 53121
-**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Midwest region
 **School:** Elkhorn (Coach: Ciara Stillings)
