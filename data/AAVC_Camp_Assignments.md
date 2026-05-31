@@ -1,6 +1,6 @@
 # AAVC 2026 Camp Assignments
 
-_Generated 2026-05-30 from FileMaker (`All American 2026`)._
+_Generated 2026-05-31 from FileMaker (`All American 2026`)._
 
 **Coaching slots open:** 33 of 219 across 119 camps (186 filled · 102 active camps total).
 
@@ -29,7 +29,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Desert Edge
 
 **Location:** Desert Edge High School — 15778 W Yuma Rd, Goodyear, AZ, 85338
-**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Southwest region
 **School:** Desert Edge (Coach: Tiffany Liddile)
@@ -58,7 +58,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Coal Ridge
 
 **Location:** Coal Ridge High School — 35947 US-6, New Castle, CO 81647
-**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Southwest region
 **School:** Coal Ridge (Coach: Julio Aguirre)
@@ -85,7 +85,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Kent Denver
 
 **Location:** Kent Denver School — 4000 E Quincy Ave, Englewood, CO 80113
-**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Southwest region
 **School:** Kent Denver School (Coach: Emily Danitz)
@@ -104,7 +104,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 
 #### Hawthorne — _Cancelled_
 
-**Location:** Hawthorne Middle HS — 21403 SE 69th Ave , Hawthorne, FL 32640
+**Location:** Hawthorne Middle HS — 21403 SE 69th Ave, Hawthorne, FL 32640
 **Dates:** Jun 1–3, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · FL/GA region
@@ -123,7 +123,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Old Plank Christian Academy — _Cancelled_
 
 **Location:** Old Plank Christian Academy — 8964 Old Plank Rd, Jacksonville, FL 32220
-**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · FL/GA region
 **School:** Old Plank Christian Academy (Coach: Tonya Keil)
@@ -318,7 +318,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Winnebago
 
 **Location:** Winnebago High School — 200 E McNair Rd, Winnebago, Illinois, 61088
-**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Midwest region
 **School:** Winnebago (Coach: Kylie Gray)
@@ -580,7 +580,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Queensbury
 
 **Location:** Queensbury High School — 409 Aviation Road, Queensbury, NY 12804
-**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · NY/PA region
 **School:** Queensbury (Coach: Kristen Murphy)
@@ -690,7 +690,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Edgerton
 
 **Location:** Edgerton HS Gym — 111 River Street, Edgerton, OH 43517
-**Dates:** Jun 29–Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jun 29 – Jul 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** No
 **Type:** Skill camp · Midwest region
 **School:** Edgerton (Coach: Krista  Pahl)
@@ -753,7 +753,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Kenton
 
 **Location:** Kenton High School — 200 Harding Ave, Kenton, OH 43326
-**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Midwest region
 **School:** Kenton (Coach: Juli Dearing)
@@ -1089,7 +1089,7 @@ _Generated 2026-05-30 from FileMaker (`All American 2026`)._
 #### Elkhorn
 
 **Location:** Elkhorn Area High School — 482 E Geneva St., Elkhorn, WI 53121
-**Dates:** Jul 30–Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
+**Dates:** Jul 30 – Aug 1, 2026 — Sessions: 9-11:30 & 12:30-3
 **MS Session:** Yes (Jul 30–31, 2026, 3:30-5:30)
 **Type:** Skill camp · Midwest region
 **School:** Elkhorn (Coach: Ciara Stillings)
